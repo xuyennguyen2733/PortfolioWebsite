@@ -1,0 +1,89 @@
+I. Getting Started
+
+1. Generate the project:
+ - In the terminal:
+ 
+    RUN `ng new [project_name] --no-standalone`
+    
+    -> choose SCSS if using Material UI theme
+    -> Server side rendering option
+    
+- Best make the project_name folder the git repo to make it easier for deploying
+
+2. Install Material UI
+- In the terminal:
+
+    RUN `ng add @angular/material`
+    
+- Choose the desired theme (rose/red for this project)
+    
+- Then, to generate custom theme:
+    
+    RUN `ng generate @angular/material:m3-theme`
+    
+3. Specify build folder
+
+To deploy to GitHub, the build folder must be in the folder named docs or dist.
+
+To deploy to other server, the built index.html should still be in the top level of the build folder.
+
+- Go to angular.json
+- Look for build, then options, then outputPath
+- Replace `"outputPath": ...` with the outputPath object
+    `
+        "outputPath": {
+            "base": "docs/",
+            "browser": ""
+        },
+    `
+    
+II. Starting to code
+
+1. Replace built-in code with your own
+
+- Go to app.component.html
+- Replace everything with just `<h1>Portfolio</h1>`
+- Run `ng serve` and go to the local url provided
+- You should see the result of your change
+
+2. Create a component
+
+- Command: `ng g c [component-name]`
+-> g stands for generate
+-> c stands for component
+
+- Create a top nav component inside the components folder
+    
+    RUN `ng g c components/top-nav`
+    
+- In app.module.ts, you should see TopNavComponent is already imported and added to the declarations field
+
+- The component is used as the tag <app-top-nav></app-top-nav>
+- The tag is the place holder for what ever is rendered in the file top-nav.component.html
+
+3. Implementing the top-nav
+
+Let's create a horizontal panel across the top of the page using the component mat-toolbar
+
+- In app.module.ts, import MatToolbarModule
+
+    `import {MatToolbarModule} from '@angular/material/toolbar';`
+    
+- Add MatToolbarModule to the imports list
+
+- In top-nav.component.html and replace the content in it with
+
+    `<mat-toolbar></mat-toolbar>`
+    
+- In app.component.html, make sure the component app-top-nav is the first component
+
+- Go to the browser to see the result
+
+Since the default theme color isn't the shade I like, I customized it by creating a file named theme.scss in the same folder as style.scss, then declare it as one of the styles in angular.json (together with style.scss)
+
+III. Troubleshoot
+
+1. Button UI not applied
+
+- Component MatButtonModule not imported in app.module.ts
+- This module allow you to use the <button> tag like normal, but with a layer of material ui on top
