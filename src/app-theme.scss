@@ -1,0 +1,20 @@
+@use '@angular/material' as mat;
+
+@use './app/components/top-nav/top-nav-theme.scss';
+
+// Styles for the docs app that are based on the current theme.
+@mixin theme($theme) {
+  .docs-app-background {
+    background: mat.get-theme-color($theme, surface);
+  }
+
+  .docs-help-support {
+    color: mat.get-theme-color($theme, on-surface);
+
+    a {
+      color: mat.get-theme-color($theme, on-surface-variant);
+    }
+  }
+
+  @include top-nav-theme.theme($theme);
+}

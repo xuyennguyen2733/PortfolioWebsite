@@ -5,20 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
+import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import {MatToolbar} from '@angular/material/toolbar'
-import { MatIcon } from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { TopNavComponent } from './components/top-nav/top-nav.component';
+import { WebAppComponent } from './components/web-app/web-app.component';
+import { ArtworkComponent } from './components/artwork/artwork.component';
+import { OthersComponent } from './components/others/others.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopNavComponent,
+    WebAppComponent,
+    ArtworkComponent,
+    OthersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbar,
-    MatIcon,
-    MatButtonModule
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
   ],
   providers: [
     provideAnimationsAsync()

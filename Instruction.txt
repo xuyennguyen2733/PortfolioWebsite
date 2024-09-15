@@ -87,3 +87,10 @@ III. Troubleshoot
 
 - Component MatButtonModule not imported in app.module.ts
 - This module allow you to use the <button> tag like normal, but with a layer of material ui on top
+
+2. Active button not changing colors
+
+- Use scss
+- styles.scss refers to app-theme.scss (see code)
+- app-theme.scss registers all component-wise theme (using @include)
+- Each component needs a theme (for top-nav, it's top-nav-theme.scss)

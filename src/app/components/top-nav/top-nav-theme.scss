@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+
+@mixin theme($theme) {
+      app-top-nav {
+        * {
+        color: mat.get-theme-color($theme, primary);
+        }
+        
+        .top-nav {
+          background: mat.get-theme-color($theme, primary-container);
+          
+            
+          .active {
+            background: rgba(mat.get-theme-color($theme, primary), 0.1);
+          }
+        }
+      }
+}
