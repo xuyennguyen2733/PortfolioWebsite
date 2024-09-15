@@ -1,0 +1,15 @@
+.project-card-container {
+    text-align: center;
+    display: 'flex';
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 15rem;
+    padding: 5%;
+}
+
+.project-card-content {
+   width: 100%;
+   height: 100%; 
+   background-color: pink;
+}

@@ -1,8 +1,20 @@
 <app-top-nav></app-top-nav>
-<header class="docs-component-page-header">
-  <button mat-button>
-    <mat-icon>menu</mat-icon>
-    Menu
-  </button>
-</header>
-<router-outlet></router-outlet>
+<main focusOnNavitation>
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="over">
+      <p>Auto-resizing sidenav</p>
+      
+    </mat-drawer>
+    <mat-drawer-content>Main Content
+      <section class="main-section">
+        <div class="example-sidenav-content">
+          <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+          </button>
+        </div>
+        <router-outlet></router-outlet>
+      </section>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+</main>

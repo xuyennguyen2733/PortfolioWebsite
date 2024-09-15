@@ -12,6 +12,11 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { WebAppComponent } from './components/web-app/web-app.component';
 import { ArtworkComponent } from './components/artwork/artwork.component';
 import { OthersComponent } from './components/others/others.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatRipple } from '@angular/material/core';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatDrawer, MatDrawerContainer, MatDrawerContent } from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -28,6 +33,12 @@ import { OthersComponent } from './components/others/others.component';
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
+    MatCardModule,
+    MatGridListModule,
+    MatDividerModule,
+    MatDrawerContainer,
+    MatDrawer,
+    MatDrawerContent
   ],
   providers: [
     provideAnimationsAsync()

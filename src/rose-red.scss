@@ -1,14 +1,22 @@
-// @use '@angular/material' as mat;
-// $theme: mat.define-theme((
-//   color: (
-//     theme-type: light,
-//     primary: mat.$rose-palette,
-//     tertiary: mat.$red-palette,
-//   )
-// ));
+@use '@angular/material' as mat;
+@use 'app-theme';
 
-// @include mat.color-variants-backwards-compatibility($theme);
+$theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$rose-palette,
+    tertiary: mat.$rose-palette,
+  )
+));
 
-// :root {
-//   @include mat.all-component-themes($theme);
-// }
+// Include material core styles.
+@include mat.core();
+@include mat.color-variants-backwards-compatibility($theme);
+@include app-theme.theme($theme);
+
+:root {
+  @include mat.all-component-themes($theme);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
