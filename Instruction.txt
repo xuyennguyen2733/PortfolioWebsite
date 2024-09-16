@@ -85,12 +85,37 @@ III. Troubleshoot
 
 1. Button UI not applied
 
-- Component MatButtonModule not imported in app.module.ts
-- This module allow you to use the <button> tag like normal, but with a layer of material ui on top
+Symptom: using the tag <button> doesn't yield the UI effect like shown in the document
+
+Solution:
+- Import the module MatButtonModule in app.module.ts
+- This module allows you to use the <button> tag like normal, but with a layer of material ui on top
+- Another use is to have the attribute mat-button in the tag
 
 2. Active button not changing colors
 
+Symptom: When a button is active (using routerLinkActive or other methods), it doesn't adopt the style specified for active button, ex. `.active: {background-color: [color]}`
+
+Solution (could have better ones):
 - Use scss
 - styles.scss refers to app-theme.scss (see code)
 - app-theme.scss registers all component-wise theme (using @include)
 - Each component needs a theme (for top-nav, it's top-nav-theme.scss)
+
+3. Cannot get round button
+
+Symptom: The button isn't round even though its content is a small icon. Even when the style is set so that width == height, the button's width is always longer.
+
+Solution:
+
+- Make sure the button attribute is `mat-icon-button` instead of `mat-button`
+
+    <button mat-icon-button><mat-menu>menu</mat-menu></button>
+
+4. ERROR RuntimeError: NG0100: ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked
+
+Symptom: when updating the grid ratio when window is resized, this error appeared in the console. If resize the grid ratio based on the size of the mat-card-content element, the resizing is delayed.
+
+Solution:
+
+- use ChangeDetectorRef to initiate change detection anytime rowHeight is change.
