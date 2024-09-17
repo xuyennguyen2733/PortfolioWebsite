@@ -1,0 +1,16 @@
+@use '@angular/material' as mat;
+
+.side-nav-extender {
+    z-index: 10;
+    height: 100%;
+    width: 3rem;
+    overflow: auto;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    @include mat.elevation(2);
+}
+
+button {
+    margin-top: 5px;
+}

@@ -17,6 +17,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatRipple } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDrawer, MatDrawerContainer, MatDrawerContent } from '@angular/material/sidenav';
+import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { MatDrawer, MatDrawerContainer, MatDrawerContent } from '@angular/materi
     WebAppComponent,
     ArtworkComponent,
     OthersComponent,
+    SvgIconComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,

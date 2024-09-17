@@ -1,10 +1,6 @@
 <app-top-nav></app-top-nav>
 <main>
-  <div class="side-nav-extender">
-    <button type="button" mat-icon-button (click)="drawer.toggle()">
-      <mat-icon style="margin: 0;">menu</mat-icon>
-    </button>
-  </div>
+  <app-side-bar (toggleDrawer)="drawer.toggle()"></app-side-bar>
   <mat-drawer-container class="drawer-container">
     <mat-drawer #drawer class="side-nav-drawer" mode="side">
       <p>Auto-resizing sidenav</p>
