@@ -8,7 +8,6 @@
         
         .top-nav {
           background: mat.get-theme-color($theme, primary-container);
-          
             
           .active {
             background: rgba(mat.get-theme-color($theme, primary), 0.1);

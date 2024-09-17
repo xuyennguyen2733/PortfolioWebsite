@@ -11,9 +11,10 @@
 }
 
 .side-nav-extender {
+    z-index: 10;
     height: 93vh;
     width: 3rem;
-    @include mat.elevation(5);
+    @include mat.elevation(2);
 }
 
 .side-nav-drawer {
