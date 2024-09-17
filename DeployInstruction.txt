@@ -34,7 +34,8 @@
 
 3. Build the project
 
-- In the terminal, run `ng build --output-path docs --base-href /[project-name]`
+- In the terminal, run `ng build --base-href /[project-name]/`
+- It is *very* important that you have 2 ‘/’ before and after your project name in the command
 - Commit and push the built version
 
 4. Set up in GitHub
@@ -45,3 +46,6 @@
 - Save
 - Now, if you go to Actions, you’ll see your page being built
 - Wait until it finish building, then go to “https://xuyennguyen2733.github.io/[project-name]”
+
+5. Built your updated website
+- From now on, when you need to make change to your website and build again, simply build and push the changes to GitHub and your hosted website will be automatically rebuilt
