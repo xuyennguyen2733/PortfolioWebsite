@@ -1,15 +1,25 @@
 <mat-card>
-    <mat-card-header style="justify-content: space-around;">
-        <mat-card-title style="width: 25rem; height: 100%; display: flex; flex-direction: column; align-items: start; justify-content: space-evenly; " >
-            <div>
-                <h4 style="color: black">Hello, I'm</h4>   
-            <h2 style="color: rosybrown; font-style: oblique;">Xuyen Nguyen.</h2>   
-            <mat-divider [inset]="true"></mat-divider>
+    <mat-card-header style="justify-content: space-around; margin-bottom: 3rem;">
+        <mat-card-title style="width: 25rem; height: 100%; display: flex; flex-direction: column; align-items: space-between; justify-content: space-between; " >
+            <div style="margin: 2rem; margin-left: 1rem;">
+                <div style="font-weight: 400;">Hello, I'm</div>   
+                <h2 style="color: rosybrown; font-style: oblique; margin: 2rem; margin-top: 1rem;">Xuyen Nguyen.</h2>   
+                <mat-divider [inset]="true"></mat-divider>
             </div>
-            <div style="width: 60%;  margin: 1rem; text-align: left; align-self: flex-end;">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nostrum harum dolore, quaerat dolor voluptate expedita error magni consequuntur omnis. Ut nostrum accusantium cupiditate eaque architecto praesentium ratione sit natus?
+            <div style="width: 100%;  margin-right: 2rem; text-align: right; align-self: flex-end;">
+                    <mat-chip style="margin-bottom: 5px;">Full-time software engineer 👩‍💻</mat-chip>
+                    <mat-chip style="margin-bottom: 5px;">Part-time game developer 🎮</mat-chip>
+                    <mat-chip style="margin-bottom: 5px;">Occasional creative artist 🎨</mat-chip>
+                    <mat-chip style="margin-bottom: 5px;">Recreational language learner 📚</mat-chip>
+                    <mat-chip style="margin-bottom: 5px;">Aspirational machine learning researcher 🤖</mat-chip>
+                    <mat-chip style="margin-bottom: 5px;">Absolutely <span style="color: palevioletred; font-weight: 700; align-self: end;">NOT</span> a pink lover 😤</mat-chip>
             </div>
-            
+            <div style="text-align: center; font-weight: lighter; font-size: medium;">
+               <p>
+                "<span style="font-style: oblique;font-weight: bold;">Motivation</span> is essentially <span style="font-weight: bold; font-style: oblique;">momentum</span>. 
+               Start taking action <span>now</span>, and motivation will follow, driving you forward."
+               </p>
+            </div>
         </mat-card-title>
         <div style="width: 25rem; height: auto;  display: flex; justify-content: center; align-items: end; position: relative;">
             <div style="position: absolute; color: black;
@@ -19,13 +29,20 @@
             padding-bottom: 1rem;
             font-family: Arial, Helvetica, sans-serif;"
             >
-                <h1>Hue, Vietnam</h1>
+            <h1>Hue, Vietnam</h1>
             <h3>July, 2023</h3>
-            </div>
-            <img width="100%" src="images/Hue-ao-dai-old-sticker-style.png" />
         </div>
-    </mat-card-header>
-    <mat-card-content>
+        <img width="100%" src="images/Hue-ao-dai-old-sticker-style.png" />
+    </div>
+</mat-card-header>
+<mat-card-content>
+    <mat-divider></mat-divider>
+    <div>
+        
+    
+    </div>
+    <span class="section-title">ABOUT ME</span>
+        <mat-divider></mat-divider>
         
     </mat-card-content>
 </mat-card>
