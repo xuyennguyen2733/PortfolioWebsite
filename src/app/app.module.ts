@@ -19,6 +19,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatDrawer, MatDrawerContainer, MatDrawerContent } from '@angular/material/sidenav';
 import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { IntroductionComponent } from './components/introduction/introduction.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     OthersComponent,
     SvgIconComponent,
     SideBarComponent,
+    IntroductionComponent,
   ],
   imports: [
     BrowserModule,

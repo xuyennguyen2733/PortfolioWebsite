@@ -2,6 +2,8 @@
 
 @mixin theme($theme) {
       app-svg-icon {
+        width: 100%;
+        height: 100%;
         svg {
             color: mat.get-theme-color($theme, primary);
             font-weight: bolder;
