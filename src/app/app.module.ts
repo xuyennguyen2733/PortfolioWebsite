@@ -20,7 +20,7 @@ import { MatDrawer, MatDrawerContainer, MatDrawerContent } from '@angular/materi
 import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
-import { MatChip, MatChipSet } from '@angular/material/chips';
+import { MatChip, MatChipGrid, MatChipRow, MatChipSet } from '@angular/material/chips';
 
 
 @NgModule({
@@ -47,7 +47,9 @@ import { MatChip, MatChipSet } from '@angular/material/chips';
     MatDrawer,
     MatDrawerContent,
     MatChip,
-    MatChipSet
+    MatChipSet,
+    MatChipGrid,
+    MatChipRow
   ],
   providers: [
     provideAnimationsAsync()
