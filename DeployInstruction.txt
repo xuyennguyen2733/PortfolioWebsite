@@ -1,0 +1,47 @@
+1. Make sure the folder of your project is also your git repo. For example, your project folder tree may look like:
+
+   my-website
+   |__.git
+   |__.gitignore
+   |__public
+   |__src
+      |__app
+      |__...
+
+- The recommend method is to create your project, then, cd into the top-level folder, init a git repo, and push it to a remote repo created with the exact same name.
+
+2. GitHub look into the root folder or the docs folder for the index.html file. Make sure you set the target build folder to be either of these (docs is recommended):
+
+- Go to angular.json
+- Look for
+
+	{
+	   ...,
+	   "build": {
+	      ...,
+	      “options”: {
+		 "outputPath": "...",
+	      },
+	      ...,
+	   },
+	   ...,
+	}
+- Change "outputPath": "..." to
+	"outputPath": {
+	   "base": “docs”,
+	   “browser”: “”,
+	}
+
+3. Build the project
+
+- In the terminal, run `ng build --output-path docs --base-href /[project-name]`
+- Commit and push the built version
+
+4. Set up in GitHub
+- Go to your repo
+- Navigate Settings->Pages (you will need to set your git repo to public or upgrade your plan)
+- Under source, select Deploy from a branch
+- Under Branch, select the branch you built and select the folder (root) or docs, whichever your built files are in.
+- Save
+- Now, if you go to Actions, you’ll see your page being built
+- Wait until it finish building, then go to “https://xuyennguyen2733.github.io/[project-name]”
