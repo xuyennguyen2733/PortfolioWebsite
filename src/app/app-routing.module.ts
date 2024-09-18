@@ -10,6 +10,7 @@ const routes: Routes = [
   {path:'web-app', component: WebAppComponent},
   {path:'artwork', component: ArtworkComponent},
   {path:'others', component: OthersComponent},
+  {path: '', redirectTo: 'introduction', pathMatch: 'full' },
 ];
 
 @NgModule({
