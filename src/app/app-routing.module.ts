@@ -6,7 +6,7 @@ import { OthersComponent } from './components/others/others.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 
 const routes: Routes = [
-  {path:'introduction', component: IntroductionComponent},
+  {path:'introduction', component: IntroductionComponent, pathMatch: 'prefix'},
   {path:'web-app', component: WebAppComponent},
   {path:'artwork', component: ArtworkComponent},
   {path:'others', component: OthersComponent},
