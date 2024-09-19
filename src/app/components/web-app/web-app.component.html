@@ -35,11 +35,18 @@
       target="_blank" class="project-list-item">
         <div class="project-card">
             
-            <img
+            <div class="project-card-image-wrapper">
+                @if (project.imagePath) {
+                    <img
               src={{project.imagePath}}
-              class="project-card-image-wrapper"
+              mat-card-image
               width="100%"
             />
+                }
+                @else {
+                    <app-svg-placeholder-image class="image-place-holder"></app-svg-placeholder-image>
+                }
+            </div>
               <div
               class="project-card-title"
               >{{project.title}}</div

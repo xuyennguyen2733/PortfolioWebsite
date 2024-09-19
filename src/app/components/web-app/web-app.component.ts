@@ -46,9 +46,9 @@ export class WebAppComponent implements AfterViewInit {
     },
     {
       title: "Signaway - Learn Sign Language",
-      imagePath: "images/web-preview/asl-alphabet-recognition.png",
+      imagePath: "",
       link: "https://xuyennguyen2733.github.io/asl-recognition/",
-      summary: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, possimus."
+      summary: "Comming soon!"
     },
   ]
 

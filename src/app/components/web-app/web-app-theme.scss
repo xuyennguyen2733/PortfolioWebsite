@@ -22,4 +22,12 @@
       .project-card-image-wrapper {
         border-bottom: 1px solid mat.get-theme-color($theme, outline-variant);
       }
+      
+      .image-place-holder {
+        color: mat.get-theme-color($theme, on-surface-variant);
+      }
+      
+      .image-place-holder svg {
+        background-color: mat.get-theme-color($theme, surface-container-low);
+      }
 }
