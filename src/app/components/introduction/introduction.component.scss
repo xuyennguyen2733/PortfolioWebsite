@@ -1,9 +1,92 @@
 mat-card {
-    height: 100%;
-    width: 100%;
-    margin: auto;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.header {
+    justify-content: space-around; margin-bottom: 3rem;
 }
 
 .skills {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title-image {
+  max-width: 25rem;
+  min-width: 18rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+  margin: auto 0 auto 0;
+}
+
+.title-text {
+    width: 98%; height: 100%; display: flex; flex-direction: column;
+    max-width: 25rem;
+}
+
+.title-greeting {
+    margin: 2rem; margin-left: 1rem
+}
+
+.title-hook {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.hook-tags {
+    width: 100%;
+            text-align: right;
+            align-self: flex-end;
+}
+
+.hook-quote {
+    text-align: center; font-weight: lighter; font-size: 1.2rem;
+    width: 100%;
+}
+
+@media only screen and (max-width: 540px) {
+    .header {
+        margin-bottom: 0;
+    }
+    
+    .title-greeting {
+        width: 15rem;
+        margin-right: 0;
+        font-size: small;
+    }
+    
+    .hook-tags {
+        width: 13rem;
+    }
+    
+    .hook-quote {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .title-greeting {
+        width: 10rem;
+        margin-right: 0;
+        font-size: small;
+    }
+    
+    .title-image {
+        min-width: 13rem;
+        font-size: xx-small;
+    }
+    
+    .title-image>div {
+        padding-bottom: 0 !important;
+    }
+    
+    .education-container {
+        flex-direction: column;
+    }
 }

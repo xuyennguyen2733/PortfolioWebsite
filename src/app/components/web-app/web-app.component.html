@@ -1,43 +1,85 @@
-<mat-card style="text-align: center; max-width: 70rem; margin: auto;" class="container-card">
-    <mat-card-header >
-        <mat-card-title>{{title}}</mat-card-title>
-    </mat-card-header>
-    <mat-divider></mat-divider>
-    <mat-card-content #cardContentRef class="container-card-content">
-        <mat-grid-list cols="2" [rowHeight]="rowHeight">
-            <mat-grid-tile>
-                <mat-card appearance="outlined" class="item-card">
-                    <mat-card-title><a href="https://xuyennguyen2733.github.io/asl-recognition/" target="_blank">ASL Alphabet Recognition</a></mat-card-title>
-                    <mat-card-content class="project-card-content">
-                        <img src="images\web-preview\asl-alphabet-recognition.png" mat-card-image width="100%" />
-                    </mat-card-content>
-                    
-                </mat-card>
-            </mat-grid-tile>
-            <mat-grid-tile class="grid-tile">
-                <mat-card appearance="outlined" class="item-card">
-                    <mat-card-title><a href="https://xuyennguyen2733.github.io/TypingPractice/" target="_blank">Chinese Typing Practice</a></mat-card-title>
-                    <mat-card-content class="project-card-content">
-                        <img src="images\web-preview\typing-practice-preview.png" mat-card-image width="100%" />
-                    </mat-card-content>
-                </mat-card>
-            </mat-grid-tile>
-            <mat-grid-tile class="grid-tile">
-                <mat-card appearance="outlined" class="item-card">
-                    <mat-card-header><mat-card-title><a href="https://xuyennguyen2733.github.io/ClassSchedule/" target="_blank">Class Scheduler</a></mat-card-title></mat-card-header>
-                    <mat-card-content class="project-card-content">
-                        <img src="images\web-preview\class-scheduler.png" mat-card-image width="100%" />
-                    </mat-card-content>
-                </mat-card>
-            </mat-grid-tile>
-            <mat-grid-tile class="grid-tile">
-                <mat-card appearance="outlined" class="item-card">
-                    <mat-card-title><a href="https://xuyennguyen2733.github.io/TypingPractice/" target="_blank">Signaway - Learn Sign Language</a></mat-card-title>
-                    <mat-card-content class="project-card-content">
-                        Coming soon
-                    </mat-card-content>
-                </mat-card>
-            </mat-grid-tile>
-        </mat-grid-list>
-    </mat-card-content>
+<mat-card
+  style="text-align: center; max-width: 70rem; margin: auto"
+  class="container-card"
+>
+  <mat-card-header>
+    <mat-card-title>{{ title }}</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content #cardContentRef class="container-card-content">
+    <mat-grid-list cols="2" [rowHeight]="rowHeight">
+      <mat-grid-tile>
+        <mat-card appearance="outlined" class="item-card">
+          <mat-card-title
+            ><a
+              href="https://xuyennguyen2733.github.io/asl-recognition/"
+              target="_blank"
+              >ASL Alphabet Recognition</a
+            ></mat-card-title
+          >
+          <mat-card-content class="project-card-content">
+            <div class="image-card">
+              <img
+                src="images\web-preview\asl-alphabet-recognition.png"
+                mat-card-image
+                width="100%"
+              />
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile class="grid-tile">
+        <mat-card appearance="outlined" class="item-card">
+          <mat-card-title
+            ><a
+              href="https://xuyennguyen2733.github.io/TypingPractice/"
+              target="_blank"
+              >Chinese Typing Practice</a
+            ></mat-card-title
+          >
+          <mat-card-content class="project-card-content">
+            <img
+              src="images\web-preview\typing-practice-preview.png"
+              mat-card-image
+              width="100%"
+            />
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile class="grid-tile">
+        <mat-card appearance="outlined" class="item-card">
+          <mat-card-header
+            ><mat-card-title
+              ><a
+                href="https://xuyennguyen2733.github.io/ClassSchedule/"
+                target="_blank"
+                >Class Scheduler</a
+              ></mat-card-title
+            ></mat-card-header
+          >
+          <mat-card-content class="project-card-content">
+            <img
+              src="images\web-preview\class-scheduler.png"
+              mat-card-image
+              width="100%"
+            />
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile class="grid-tile">
+        <mat-card appearance="outlined" class="item-card">
+          <mat-card-title
+            ><a
+              href="https://xuyennguyen2733.github.io/TypingPractice/"
+              target="_blank"
+              >Signaway - Learn Sign Language</a
+            ></mat-card-title
+          >
+          <mat-card-content class="project-card-content">
+            Coming soon
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
 </mat-card>

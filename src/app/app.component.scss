@@ -1,23 +1,23 @@
 .main-content {
-    padding: 2rem;
-    height: fit-content;
-    overflow: auto;
+  padding: 2rem;
+  height: fit-content;
+  overflow: auto;
 }
 
 .drawer-container {
-    background-color: white;
-    width: 100%;
+  background-color: white;
+  width: 100%;
 }
 
 .side-nav-drawer {
-    width: 20vw;
-    max-width: 15rem;
-    height: 100%;
+  width: 20vw;
+  max-width: 15rem;
+  height: 100%;
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
-    height: calc(100vh - 3.5rem);
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  height: calc(100vh - 3.5rem);
 }

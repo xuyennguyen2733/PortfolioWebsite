@@ -1,13 +1,16 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
 @mixin theme($theme) {
-    app-side-bar {
-        div.side-nav-extender {
-            background-color: rgba(mat.get-theme-color($theme, primary-container),0.1);
-        }
-        button:first-of-type {
-            @include mat.elevation(2);
-            background-color: white;
-        }
+  app-side-bar {
+    div.side-nav-extender {
+      background-color: rgba(
+        mat.get-theme-color($theme, primary-container),
+        0.1
+      );
     }
+    button:first-of-type {
+      @include mat.elevation(2);
+      background-color: white;
+    }
+  }
 }

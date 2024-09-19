@@ -1,8 +1,8 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
-@use './app/components/top-nav/top-nav-theme.scss';
-@use './app/components/side-bar/side-bar-theme.scss';
-@use './app/shared/svg-icon/svg-icon-theme.scss';
+@use "./app/components/top-nav/top-nav-theme.scss";
+@use "./app/components/side-bar/side-bar-theme.scss";
+@use "./app/shared/svg-icon/svg-icon-theme.scss";
 
 // Styles for the docs app that are based on the current theme.
 @mixin theme($theme) {

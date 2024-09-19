@@ -1,13 +1,15 @@
-@use '@angular/material' as mat;
-@use 'app-theme';
+@use "@angular/material" as mat;
+@use "app-theme";
 
-$theme: mat.define-theme((
-  color: (
-    theme-type: light,
-    primary: mat.$rose-palette,
-    tertiary: mat.$rose-palette,
+$theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$rose-palette,
+      tertiary: mat.$rose-palette,
+    ),
   )
-));
+);
 
 // Include material core styles.
 @include mat.core();
@@ -17,6 +19,3 @@ $theme: mat.define-theme((
 :root {
   @include mat.all-component-themes($theme);
 }
-
-html, body { height: 100vh;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
