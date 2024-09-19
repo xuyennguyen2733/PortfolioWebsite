@@ -18,24 +18,28 @@
   margin: 1.2rem;
   vertical-align: top;
 
-  .project-card-summary, .project-card-title {
+  .project-card-summary,
+  .project-card-title {
     display: flex;
     align-items: center;
     text-align: left;
   }
-  
+
   .project-card-summary {
     font-size: 1rem;
     margin: 0 1rem 1rem 1rem;
   }
-  
+
   .project-card-title {
     font-size: 1.2rem;
     font-weight: 500;
     padding: 1rem;
   }
 
-  &, &:active, &:hover, &:focus {
+  &,
+  &:active,
+  &:hover,
+  &:focus {
     text-decoration: none;
   }
 }
@@ -44,4 +48,3 @@
   height: 12rem;
   overflow: hidden;
 }
-

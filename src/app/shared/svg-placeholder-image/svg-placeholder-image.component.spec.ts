@@ -8,9 +8,8 @@ describe('SvgPlaceholderImageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SvgPlaceholderImageComponent]
-    })
-    .compileComponents();
+      declarations: [SvgPlaceholderImageComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SvgPlaceholderImageComponent);
     component = fixture.componentInstance;

@@ -28,40 +28,53 @@
   <mat-divider></mat-divider>
   <mat-card-content #cardContentRef class="container-card-content">
     <div class="project-list">
-        @for (project of projects; track project) {
-            <a
-      class="project-list-item"
-      href={{project.link}}
-      target="_blank" class="project-list-item">
-        <div class="project-card">
-            
-            <div class="project-card-image-wrapper">
+      @for (project of projects; track project) {
+        @if (!!project.link) {
+          <a
+            class="project-list-item"
+            href="{{ project.link }}"
+            target="_blank"
+          >
+            <div class="project-card">
+              <div class="project-card-image-wrapper">
                 @if (project.imagePath) {
-                    <img
-              src={{project.imagePath}}
-              mat-card-image
-              width="100%"
-            />
+                  <img
+                    src="{{ project.imagePath }}"
+                    mat-card-image
+                    width="100%"
+                  />
+                } @else {
+                  <app-svg-placeholder-image
+                    class="image-place-holder"
+                  ></app-svg-placeholder-image>
                 }
-                @else {
-                    <app-svg-placeholder-image class="image-place-holder"></app-svg-placeholder-image>
-                }
+              </div>
+              <div class="project-card-title">{{ project.title }}</div>
+              <div class="project-card-summary">{{ project.summary }}</div>
             </div>
-              <div
-              class="project-card-title"
-              >{{project.title}}</div
-            >
-              <div
-              class="project-card-summary"
-              >{{project.summary}}</div
-            >
-        </div>
-        
-    </a>
+          </a>
+        } @else {
+          <div class="project-list-item" target="_blank">
+            <div class="project-card">
+              <div class="project-card-image-wrapper">
+                @if (project.imagePath) {
+                  <img
+                    src="{{ project.imagePath }}"
+                    mat-card-image
+                    width="100%"
+                  />
+                } @else {
+                  <app-svg-placeholder-image
+                    class="image-place-holder"
+                  ></app-svg-placeholder-image>
+                }
+              </div>
+              <div class="project-card-title">{{ project.title }}</div>
+              <div class="project-card-summary">{{ project.summary }}</div>
+            </div>
+          </div>
         }
-      
-    
-      
+      }
     </div>
   </mat-card-content>
 </mat-card>
