@@ -17,6 +17,7 @@ interface IntroChip {
 
 export class IntroductionComponent {
   isSmallScreen: boolean = false;
+  isExtraSmallScreen: boolean = false;
   introductionChipData: IntroChip[] = [
     {textElements: [{text: "Full-time software engineer"}], icon: "👩‍💻"},
     {textElements: [{text: "Part-time game developer"}], icon: "🎮"},
@@ -29,8 +30,9 @@ export class IntroductionComponent {
   
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.isSmallScreen = window.innerWidth < 540;
-    console.log('screen', window.innerWidth, this.isSmallScreen)
+    this.isSmallScreen = window.innerWidth <= 540;
+    this.isExtraSmallScreen = window.innerWidth <= 360;
+    console.log('x-small', this.isExtraSmallScreen)
   }
   
   ngOnInit() {

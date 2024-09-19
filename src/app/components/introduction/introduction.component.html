@@ -47,7 +47,7 @@
         </div>
       </div>
     </mat-card-title>
-    <div class="title-image">
+    <div class="title-image" [hidden]="isExtraSmallScreen">
       <div
         style="
           position: absolute;
@@ -195,7 +195,7 @@
     <mat-card style="background-color: white; margin-bottom: 2rem">
       <mat-card-content>
         <div style="margin-bottom: 2.5rem">
-          <div style="display: flex; justify-content: space-between">
+          <div class="experience-header">
             <div>
               <div style="font-weight: bold">Software Engineer</div>
               <div>BlueSkyTech</div>
@@ -217,7 +217,7 @@
           </ul>
         </div>
         <div>
-          <div style="display: flex; justify-content: space-between">
+          <div class="experience-header">
             <div>
               <div style="font-weight: bold">Full-Stack Developer</div>
               <div>University of Utah - Umail</div>

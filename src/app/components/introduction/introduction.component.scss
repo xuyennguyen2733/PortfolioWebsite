@@ -50,6 +50,10 @@ mat-card {
     width: 100%;
 }
 
+.experience-header {
+    display: flex; justify-content: space-between;
+}
+
 @media only screen and (max-width: 540px) {
     .header {
         margin-bottom: 0;
@@ -67,6 +71,8 @@ mat-card {
     
     .hook-quote {
         width: 95%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -78,7 +84,7 @@ mat-card {
     }
     
     .title-image {
-        min-width: 13rem;
+        min-width: 12rem;
         font-size: xx-small;
     }
     
@@ -86,7 +92,32 @@ mat-card {
         padding-bottom: 0 !important;
     }
     
-    .education-container {
+    .education-container, .experience-header {
         flex-direction: column;
+    }
+    
+    .title-text {
+        width: 12rem;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 360px) {
+    .header {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .title-text {
+        width: 20rem;
+    }
+    
+    .title-image {
+        font-size: medium;
+    }
+    
+    .title-greeting {
+        width: 100%;
+        font-size: medium;
     }
 }
