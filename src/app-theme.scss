@@ -1,7 +1,7 @@
 @use "@angular/material" as mat;
 
 @use "./app/components/top-nav/top-nav-theme.scss";
-@use "./app/components/web-app/web-app-theme.scss";
+@use "./app/utils/link-card/link-card-theme.scss";
 @use "./app/components/side-bar/side-bar-theme.scss";
 
 // Styles for the docs app that are based on the current theme.
@@ -19,6 +19,6 @@
   }
 
   @include top-nav-theme.theme($theme);
-  @include web-app-theme.theme($theme);
+  @include link-card-theme.theme($theme);
   @include side-bar-theme.theme($theme);
 }

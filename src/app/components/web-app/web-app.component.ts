@@ -9,7 +9,7 @@ import {
 
 interface Project {
   title: string;
-  imagePath: string;
+  imagePath?: string;
   link?: string;
   summary: string;
 }
@@ -49,7 +49,6 @@ export class WebAppComponent implements AfterViewInit {
     },
     {
       title: 'Signaway - Learn Sign Language',
-      imagePath: '',
       summary: 'Comming soon!',
     },
   ];

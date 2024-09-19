@@ -1,0 +1,45 @@
+@if (!!link) {
+    <a
+      class="project-list-item"
+      href="{{ link }}"
+      target="_blank"
+    >
+      <div class="project-card">
+        <div class="project-card-image-wrapper">
+          @if (imagePath) {
+            <img
+              src="{{ imagePath }}"
+              mat-card-image
+              width="100%"
+            />
+          } @else {
+            <app-svg-placeholder-image
+              class="image-place-holder"
+            ></app-svg-placeholder-image>
+          }
+        </div>
+        <div class="project-card-title">{{ title }}</div>
+        <div class="project-card-summary">{{ summary }}</div>
+      </div>
+    </a>
+  } @else {
+    <div class="project-list-item" target="_blank">
+      <div class="project-card">
+        <div class="project-card-image-wrapper">
+          @if (!!imagePath) {
+            <img
+              src="{{ imagePath }}"
+              mat-card-image
+              width="100%"
+            />
+          } @else {
+            <app-svg-placeholder-image
+              class="image-place-holder"
+            ></app-svg-placeholder-image>
+          }
+        </div>
+        <div class="project-card-title">{{ title }}</div>
+        <div class="project-card-summary">{{ summary }}</div>
+      </div>
+    </div>
+  }

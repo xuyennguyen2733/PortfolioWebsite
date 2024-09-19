@@ -29,51 +29,12 @@
   <mat-card-content #cardContentRef class="container-card-content">
     <div class="project-list">
       @for (project of projects; track project) {
-        @if (!!project.link) {
-          <a
-            class="project-list-item"
-            href="{{ project.link }}"
-            target="_blank"
-          >
-            <div class="project-card">
-              <div class="project-card-image-wrapper">
-                @if (project.imagePath) {
-                  <img
-                    src="{{ project.imagePath }}"
-                    mat-card-image
-                    width="100%"
-                  />
-                } @else {
-                  <app-svg-placeholder-image
-                    class="image-place-holder"
-                  ></app-svg-placeholder-image>
-                }
-              </div>
-              <div class="project-card-title">{{ project.title }}</div>
-              <div class="project-card-summary">{{ project.summary }}</div>
-            </div>
-          </a>
-        } @else {
-          <div class="project-list-item" target="_blank">
-            <div class="project-card">
-              <div class="project-card-image-wrapper">
-                @if (project.imagePath) {
-                  <img
-                    src="{{ project.imagePath }}"
-                    mat-card-image
-                    width="100%"
-                  />
-                } @else {
-                  <app-svg-placeholder-image
-                    class="image-place-holder"
-                  ></app-svg-placeholder-image>
-                }
-              </div>
-              <div class="project-card-title">{{ project.title }}</div>
-              <div class="project-card-summary">{{ project.summary }}</div>
-            </div>
-          </div>
-        }
+        <app-link-card
+            [title]="project.title"
+            [link]="project.link"
+            [imagePath]="project.imagePath"
+            [summary]="project.summary"
+        ></app-link-card>
       }
     </div>
   </mat-card-content>
