@@ -3,7 +3,6 @@
 @use "./app/components/top-nav/top-nav-theme.scss";
 @use "./app/components/web-app/web-app-theme.scss";
 @use "./app/components/side-bar/side-bar-theme.scss";
-@use "./app/shared/svg-icon/svg-icon-theme.scss";
 
 // Styles for the docs app that are based on the current theme.
 @mixin theme($theme) {
@@ -22,5 +21,4 @@
   @include top-nav-theme.theme($theme);
   @include web-app-theme.theme($theme);
   @include side-bar-theme.theme($theme);
-  @include svg-icon-theme.theme($theme);
 }

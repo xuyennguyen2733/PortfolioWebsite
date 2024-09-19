@@ -21,7 +21,7 @@ import {
   MatDrawerContainer,
   MatDrawerContent,
 } from '@angular/material/sidenav';
-import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
+import { SvgGitHubIconComponent, SvgIconComponent } from './shared/svg-icon/svg-icon.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import {
@@ -40,6 +40,7 @@ import { SvgPlaceholderImageComponent } from './shared/svg-placeholder-image/svg
     ArtworkComponent,
     OthersComponent,
     SvgIconComponent,
+    SvgGitHubIconComponent,
     SideBarComponent,
     IntroductionComponent,
     SvgPlaceholderImageComponent,
