@@ -6,11 +6,10 @@ import { OthersComponent } from './components/others/others.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 
 const routes: Routes = [
-  { path: 'introduction', component: IntroductionComponent },
   { path: 'web-app', component: WebAppComponent },
   { path: 'artwork', component: ArtworkComponent },
   { path: 'others', component: OthersComponent },
-  { path: '', redirectTo: 'introduction', pathMatch: 'full' },
+  { path: '', pathMatch: 'full', component: IntroductionComponent },
   { path: '**', redirectTo: 'introduction' },
 ];
 
