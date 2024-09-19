@@ -1,12 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 
 interface TextElement {
-  text: string
-  style?: string
+  text: string;
+  style?: string;
 }
 interface IntroChip {
-  textElements: TextElement[]
-  icon: string
+  textElements: TextElement[];
+  icon: string;
 }
 
 @Component({
@@ -14,27 +14,35 @@ interface IntroChip {
   templateUrl: './introduction.component.html',
   styleUrl: './introduction.component.scss',
 })
-
 export class IntroductionComponent {
   isSmallScreen: boolean = false;
   isExtraSmallScreen: boolean = false;
   introductionChipData: IntroChip[] = [
-    {textElements: [{text: "Full-time software engineer"}], icon: "👩‍💻"},
-    {textElements: [{text: "Part-time game developer"}], icon: "🎮"},
-    {textElements: [{text: "Occasional creative artist"}], icon: "🎨"},
-    {textElements: [{text: "Recreational language learner"}], icon: "📚"},
-    {textElements: [{text: "Aspirational machine learning researcher"}], icon: "🤖"},
-    {textElements: [{text: "Absolutely"}, {text: "NOT", style: "color: palevioletred; font-weight: 700;"}, {text: "a pink lover"}], icon: "😤"},
+    { textElements: [{ text: 'Full-time software engineer' }], icon: '👩‍💻' },
+    { textElements: [{ text: 'Part-time game developer' }], icon: '🎮' },
+    { textElements: [{ text: 'Occasional creative artist' }], icon: '🎨' },
+    { textElements: [{ text: 'Recreational language learner' }], icon: '📚' },
+    {
+      textElements: [{ text: 'Aspirational machine learning researcher' }],
+      icon: '🤖',
+    },
+    {
+      textElements: [
+        { text: 'Absolutely' },
+        { text: 'NOT', style: 'color: palevioletred; font-weight: 700;' },
+        { text: 'a pink lover' },
+      ],
+      icon: '😤',
+    },
   ];
-  
-  
+
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.isSmallScreen = window.innerWidth <= 540;
     this.isExtraSmallScreen = window.innerWidth <= 360;
-    console.log('x-small', this.isExtraSmallScreen)
+    console.log('x-small', this.isExtraSmallScreen);
   }
-  
+
   ngOnInit() {
     this.onResize();
   }

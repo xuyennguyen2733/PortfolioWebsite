@@ -1,5 +1,5 @@
 <mat-card style="max-width: 70rem">
-  <mat-card-header class="header" >
+  <mat-card-header class="header">
     <mat-card-title class="title-text">
       <div class="title-greeting">
         <div style="font-weight: 400">Hello, I'm</div>
@@ -15,27 +15,24 @@
         </h2>
         <mat-divider [inset]="true"></mat-divider>
       </div>
-      <div
-        class="title-hook"
-      >
-        <div
-          class="hook-tags"
-        >
-          <mat-chip *ngFor="let chip of introductionChipData" style="margin: 0.2rem;">
-            <span [hidden]="isSmallScreen" *ngFor="let element of chip.textElements" 
-                  [innerHTML]="element.text + ' '" 
-                  [style]="element.style"
-                  >
+      <div class="title-hook">
+        <div class="hook-tags">
+          <mat-chip
+            *ngFor="let chip of introductionChipData"
+            style="margin: 0.2rem"
+          >
+            <span
+              [hidden]="isSmallScreen"
+              *ngFor="let element of chip.textElements"
+              [innerHTML]="element.text + ' '"
+              [style]="element.style"
+            >
             </span>
             <span>{{ chip.icon }}</span>
           </mat-chip>
-          
         </div>
-        <div
-          class="hook-quote"
-          [hidden]="isSmallScreen"
-        >
-          <p >
+        <div class="hook-quote" [hidden]="isSmallScreen">
+          <p>
             "<span style="font-style: oblique; font-weight: bold"
               >Motivation</span
             >
@@ -65,20 +62,15 @@
       <img width="95%" src="images/Hue-ao-dai-old-sticker-style.png" />
     </div>
   </mat-card-header>
-  <div
-          class="hook-quote"
-          [hidden]="!isSmallScreen"
-        >
-          <p >
-            "<span style="font-style: oblique; font-weight: bold"
-              >Motivation</span
-            >
-            is essentially
-            <span style="font-weight: bold; font-style: oblique">momentum</span
-            >. Start taking action <span>now</span>, and motivation will follow,
-            driving you forward."
-          </p>
-        </div>
+  <div class="hook-quote" [hidden]="!isSmallScreen">
+    <p>
+      "<span style="font-style: oblique; font-weight: bold">Motivation</span>
+      is essentially
+      <span style="font-weight: bold; font-style: oblique">momentum</span>.
+      Start taking action <span>now</span>, and motivation will follow, driving
+      you forward."
+    </p>
+  </div>
   <mat-card-content>
     <div style="margin: 0.5rem; font-size: small">
       <span style="font-weight: bold">ABOUT ME</span>
@@ -118,8 +110,11 @@
       <span style="font-weight: bold">EDUCATION</span>
     </div>
     <mat-card style="background-color: white; margin-bottom: 2rem">
-      <mat-card-content class="education-container" style="display: flex; justify-content: space-between">
-        <div >
+      <mat-card-content
+        class="education-container"
+        style="display: flex; justify-content: space-between"
+      >
+        <div>
           <div>University of Utah</div>
           <div>Bachelor of Science in Computer Science</div>
         </div>

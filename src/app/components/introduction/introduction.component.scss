@@ -5,7 +5,8 @@ mat-card {
 }
 
 .header {
-    justify-content: space-around; margin-bottom: 3rem;
+  justify-content: space-around;
+  margin-bottom: 3rem;
 }
 
 .skills {
@@ -24,100 +25,106 @@ mat-card {
 }
 
 .title-text {
-    width: 98%; height: 100%; display: flex; flex-direction: column;
-    max-width: 25rem;
+  width: 98%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
 }
 
 .title-greeting {
-    margin: 2rem; margin-left: 1rem
+  margin: 2rem;
+  margin-left: 1rem;
 }
 
 .title-hook {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .hook-tags {
-    width: 100%;
-            text-align: right;
-            align-self: flex-end;
+  width: 100%;
+  text-align: right;
+  align-self: flex-end;
 }
 
 .hook-quote {
-    text-align: center; font-weight: lighter; font-size: 1.2rem;
-    width: 100%;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  width: 100%;
 }
 
 .experience-header {
-    display: flex; justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 540px) {
-    .header {
-        margin-bottom: 0;
-    }
-    
-    .title-greeting {
-        width: 15rem;
-        margin-right: 0;
-        font-size: small;
-    }
-    
-    .hook-tags {
-        width: 13rem;
-    }
-    
-    .hook-quote {
-        width: 95%;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
+  .header {
+    margin-bottom: 0;
+  }
+
+  .title-greeting {
+    width: 15rem;
+    margin-right: 0;
+    font-size: small;
+  }
+
+  .hook-tags {
+    width: 13rem;
+  }
+
+  .hook-quote {
+    width: 95%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 @media only screen and (max-width: 475px) {
-    .title-greeting {
-        width: 10rem;
-        margin-right: 0;
-        font-size: small;
-    }
-    
-    .title-image {
-        min-width: 12rem;
-        font-size: xx-small;
-    }
-    
-    .title-image>div {
-        padding-bottom: 0 !important;
-    }
-    
-    .education-container, .experience-header {
-        flex-direction: column;
-    }
-    
-    .title-text {
-        width: 12rem;
-    }
-    
-    
+  .title-greeting {
+    width: 10rem;
+    margin-right: 0;
+    font-size: small;
+  }
+
+  .title-image {
+    min-width: 12rem;
+    font-size: xx-small;
+  }
+
+  .title-image > div {
+    padding-bottom: 0 !important;
+  }
+
+  .education-container,
+  .experience-header {
+    flex-direction: column;
+  }
+
+  .title-text {
+    width: 12rem;
+  }
 }
 
 @media only screen and (max-width: 360px) {
-    .header {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    .title-text {
-        width: 20rem;
-    }
-    
-    .title-image {
-        font-size: medium;
-    }
-    
-    .title-greeting {
-        width: 100%;
-        font-size: medium;
-    }
+  .header {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .title-text {
+    width: 20rem;
+  }
+
+  .title-image {
+    font-size: medium;
+  }
+
+  .title-greeting {
+    width: 100%;
+    font-size: medium;
+  }
 }
