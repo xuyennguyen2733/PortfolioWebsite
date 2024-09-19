@@ -1,3 +1,23 @@
+<!-- <div class="docs-component-category-list"></div>
+    @for (component of docItems.getItems(section); track component) {
+      <a class="docs-component-category-list-item"
+         [routerLink]="'/' + section + '/' + component.id">
+        <div class="docs-component-category-list-card" matRipple>
+          @if (section === 'components') {
+            <img class="docs-component-category-list-card-image-wrapper"
+                [src]="'../../../assets/screenshots/' + component.id + '.scene.png'"
+                loading="lazy"
+                alt=""
+                role="presentation"
+                aria-hidden="true">
+          }
+          <div class="docs-component-category-list-card-title">{{component.name}}</div>
+          <div class="docs-component-category-list-card-summary">{{component.summary}}</div>
+        </div>
+      </a>
+    }
+  </div> -->
+
 <mat-card
   style="text-align: center; max-width: 70rem; margin: auto"
   class="container-card"
@@ -7,79 +27,34 @@
   </mat-card-header>
   <mat-divider></mat-divider>
   <mat-card-content #cardContentRef class="container-card-content">
-    <mat-grid-list cols="2" [rowHeight]="rowHeight">
-      <mat-grid-tile>
-        <mat-card appearance="outlined" class="item-card">
-          <mat-card-title
-            ><a
-              href="https://xuyennguyen2733.github.io/asl-recognition/"
-              target="_blank"
-              >ASL Alphabet Recognition</a
-            ></mat-card-title
-          >
-          <mat-card-content class="project-card-content">
-            <div class="image-card">
-              <img
-                src="images\web-preview\asl-alphabet-recognition.png"
-                mat-card-image
-                width="100%"
-              />
-            </div>
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile class="grid-tile">
-        <mat-card appearance="outlined" class="item-card">
-          <mat-card-title
-            ><a
-              href="https://xuyennguyen2733.github.io/TypingPractice/"
-              target="_blank"
-              >Chinese Typing Practice</a
-            ></mat-card-title
-          >
-          <mat-card-content class="project-card-content">
+    <div class="project-list">
+        @for (project of projects; track project) {
+            <a
+      class="project-list-item"
+      href={{project.link}}
+      target="_blank" class="project-list-item">
+        <div class="project-card">
+            
             <img
-              src="images\web-preview\typing-practice-preview.png"
-              mat-card-image
+              src={{project.imagePath}}
+              class="project-card-image-wrapper"
               width="100%"
             />
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile class="grid-tile">
-        <mat-card appearance="outlined" class="item-card">
-          <mat-card-header
-            ><mat-card-title
-              ><a
-                href="https://xuyennguyen2733.github.io/ClassSchedule/"
-                target="_blank"
-                >Class Scheduler</a
-              ></mat-card-title
-            ></mat-card-header
-          >
-          <mat-card-content class="project-card-content">
-            <img
-              src="images\web-preview\class-scheduler.png"
-              mat-card-image
-              width="100%"
-            />
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile class="grid-tile">
-        <mat-card appearance="outlined" class="item-card">
-          <mat-card-title
-            ><a
-              href="https://xuyennguyen2733.github.io/TypingPractice/"
-              target="_blank"
-              >Signaway - Learn Sign Language</a
-            ></mat-card-title
-          >
-          <mat-card-content class="project-card-content">
-            Coming soon
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+              <div
+              class="project-card-title"
+              >{{project.title}}</div
+            >
+              <div
+              class="project-card-summary"
+              >{{project.summary}}</div
+            >
+        </div>
+        
+    </a>
+        }
+      
+    
+      
+    </div>
   </mat-card-content>
 </mat-card>

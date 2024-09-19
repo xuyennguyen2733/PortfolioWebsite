@@ -1,21 +1,47 @@
-mat-card {
-  text-align: center;
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 50rem;
+  margin: auto;
 }
 
-.container-card {
-  height: 85vh;
+.project-card {
+  overflow: hidden;
+  width: 20rem;
+  height: 20rem;
+  transition: background 0.3s ease;
 }
 
-.item-card {
-  width: 80%;
-  height: 80%;
-  padding: 5%;
+.project-list-item {
+  display: inline-block;
+  margin: 1.2rem;
+  vertical-align: top;
+
+  .project-card-summary, .project-card-title {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .project-card-summary {
+    font-size: 1rem;
+    margin: 0 1rem 1rem 1rem;
+  }
+  
+  .project-card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem;
+  }
+
+  &, &:active, &:hover, &:focus {
+    text-decoration: none;
+  }
 }
 
-.project-card-content {
+.project-card-image-wrapper {
+  height: 12rem;
   overflow: hidden;
 }
 
-mat-card-title {
-  margin-bottom: 1rem;
-}

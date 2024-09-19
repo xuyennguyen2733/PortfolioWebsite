@@ -7,6 +7,13 @@ import {
   ViewChild,
 } from '@angular/core';
 
+interface Project {
+  title: string
+  imagePath: string
+  link: string
+  summary: string
+}
+
 @Component({
   selector: 'app-web-app',
   templateUrl: './web-app.component.html',
@@ -17,6 +24,33 @@ export class WebAppComponent implements AfterViewInit {
   resizeObserver!: ResizeObserver;
   title: string = 'Web App';
   rowHeight: string = '3:1';
+  
+  projects: Project[] = [
+    {
+      title: "ASL Alphabet Recognition",
+      imagePath: "images/web-preview/asl-alphabet-recognition.png",
+      link: "https://xuyennguyen2733.github.io/asl-recognition/",
+      summary: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, possimus."
+    },
+    {
+      title: "Chinese Typing Practice",
+      imagePath: "images/web-preview/typing-practice-preview.png",
+      link: "https://xuyennguyen2733.github.io/TypingPractice/",
+      summary: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, possimus."
+    },
+    {
+      title: "Class Schedule Maker",
+      imagePath: "images/web-preview/class-scheduler.png",
+      link: "https://xuyennguyen2733.github.io/ClassSchedule/",
+      summary: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, possimus."
+    },
+    {
+      title: "Signaway - Learn Sign Language",
+      imagePath: "images/web-preview/asl-alphabet-recognition.png",
+      link: "https://xuyennguyen2733.github.io/asl-recognition/",
+      summary: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, possimus."
+    },
+  ]
 
   constructor(
     private elRef: ElementRef,

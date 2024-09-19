@@ -30,6 +30,7 @@ import {
   MatChipRow,
   MatChipSet,
 } from '@angular/material/chips';
+import { SvgPlaceholderImageComponent } from './shared/svg-placeholder-image/svg-placeholder-image.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import {
     SvgIconComponent,
     SideBarComponent,
     IntroductionComponent,
+    SvgPlaceholderImageComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+    .project-summary a {
+        color: mat.get-theme-color($theme, primary);
+      }
+    
+      .project-card-title,
+      .project-card-summary  {
+        color: mat.get-theme-color($theme, on-surface-variant);
+      }
+    
+      .project-card {
+        border: 1px solid mat.get-theme-color($theme, outline-variant);
+        border-radius: 12px;
+      }
+    
+      .project-card:hover {
+        background: mat.get-theme-color($theme, surface-dim);
+      }
+    
+      .project-card-image-wrapper {
+        border-bottom: 1px solid mat.get-theme-color($theme, outline-variant);
+      }
+}
