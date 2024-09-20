@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 .main-content {
   padding: 2rem;
   height: fit-content;
@@ -5,7 +7,6 @@
 }
 
 .drawer-container {
-  background-color: white;
   width: 100%;
 }
 

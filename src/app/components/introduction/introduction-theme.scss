@@ -1,0 +1,13 @@
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+    mat-card.container {
+        background-color: mat.get-theme-color($theme, inverse-on-surface);
+      }
+      mat-divider {
+        border: 1px solid mat.get-theme-color($theme, outline-variant);
+      }
+      .my-name {
+        color: mat.get-theme-color($theme, on-primary-fixed-variant);
+      }
+}

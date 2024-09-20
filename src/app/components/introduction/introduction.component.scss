@@ -2,6 +2,7 @@ mat-card {
   height: 100%;
   width: 100%;
   margin: auto;
+  overflow: hidden;
 }
 
 .header {
@@ -82,6 +83,14 @@ mat-card {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+}
+
+.card {
+  margin-bottom: 2rem
+}
+
+.education-container {
+  display: flex; justify-content: space-between
 }
 
 @media only screen and (max-width: 475px) {

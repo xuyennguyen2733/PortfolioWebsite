@@ -10,7 +10,7 @@
     }
     button:first-of-type {
       @include mat.elevation(2);
-      background-color: white;
+      background-color: mat.get-theme-color($theme, surface-variant);
     }
   }
 }
