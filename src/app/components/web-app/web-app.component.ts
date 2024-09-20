@@ -49,7 +49,8 @@ export class WebAppComponent implements AfterViewInit {
     },
     {
       title: 'Signaway - Learn Sign Language',
-      summary: '(Comming soon!) Stemming from the idea of Signable, this app goes beyond the ASL alphabet by teaching users basic hand shapes and guiding them through signing words and phrases.',
+      summary:
+        '(Comming soon!) Stemming from the idea of Signable, this app goes beyond the ASL alphabet by teaching users basic hand shapes and guiding them through signing words and phrases.',
     },
   ];
 

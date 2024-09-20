@@ -86,11 +86,12 @@ mat-card {
 }
 
 .card {
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
 }
 
 .education-container {
-  display: flex; justify-content: space-between
+  display: flex;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 475px) {

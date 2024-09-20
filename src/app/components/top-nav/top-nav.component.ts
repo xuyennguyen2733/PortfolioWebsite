@@ -7,8 +7,8 @@ import { Component, HostListener } from '@angular/core';
 })
 export class TopNavComponent {
   isExtraSmallScreen: boolean = false;
-  
-  @HostListener('window:resize',['$event'])
+
+  @HostListener('window:resize', ['$event'])
   onResize() {
     this.isExtraSmallScreen = window.innerWidth < 400;
   }

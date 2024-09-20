@@ -10,7 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { WebAppComponent } from './components/web-app/web-app.component';
-import { ArtworkComponent, PopUpImage } from './components/artwork/artwork.component';
+import {
+  ArtworkComponent,
+  PopUpImage,
+} from './components/artwork/artwork.component';
 import { OthersComponent } from './components/others/others.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -21,7 +24,10 @@ import {
   MatDrawerContainer,
   MatDrawerContent,
 } from '@angular/material/sidenav';
-import { SvgGitHubIconComponent, SvgIconComponent } from './shared/svg-icon/svg-icon.component';
+import {
+  SvgGitHubIconComponent,
+  SvgIconComponent,
+} from './shared/svg-icon/svg-icon.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import {
@@ -34,7 +40,11 @@ import { SvgPlaceholderImageComponent } from './shared/svg-placeholder-image/svg
 import { SvgIconButtonComponent } from './utils/svg-icon-button/icon-button.component';
 import { LinkCardComponent } from './utils/link-card/link-card.component';
 import { MatTab, MatTabGroup } from '@angular/material/tabs';
-import { MatDialogActions, MatDialogContent, MatDialogTitle } from '@angular/material/dialog';
+import {
+  MatDialogActions,
+  MatDialogContent,
+  MatDialogTitle,
+} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -50,7 +60,7 @@ import { MatDialogActions, MatDialogContent, MatDialogTitle } from '@angular/mat
     SvgPlaceholderImageComponent,
     SvgIconButtonComponent,
     LinkCardComponent,
-    PopUpImage
+    PopUpImage,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +82,7 @@ import { MatDialogActions, MatDialogContent, MatDialogTitle } from '@angular/mat
     MatTabGroup,
     MatDialogTitle,
     MatDialogContent,
-    MatDialogActions
+    MatDialogActions,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

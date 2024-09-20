@@ -1,45 +1,33 @@
 @if (!!link) {
-    <a
-      class="list-item"
-      href="{{ link }}"
-      target="_blank"
-    >
-      <div class="card">
-        <div class="card-image-wrapper">
-          @if (imagePath) {
-            <img
-              src="{{ imagePath }}"
-              mat-card-image
-              width="100%"
-            />
-          } @else {
-            <svg-placeholder-image
-              class="image-place-holder"
-            ></svg-placeholder-image>
-          }
-        </div>
-        <div class="card-title">{{ title }}</div>
-        <div class="card-summary">{{ summary }}</div>
+  <a class="list-item" href="{{ link }}" target="_blank">
+    <div class="card">
+      <div class="card-image-wrapper">
+        @if (imagePath) {
+          <img src="{{ imagePath }}" mat-card-image width="100%" />
+        } @else {
+          <svg-placeholder-image
+            class="image-place-holder"
+          ></svg-placeholder-image>
+        }
       </div>
-    </a>
-  } @else {
-    <div class="list-item" target="_blank">
-      <div class="card">
-        <div class="card-image-wrapper">
-          @if (!!imagePath) {
-            <img
-              src="{{ imagePath }}"
-              mat-card-image
-              width="100%"
-            />
-          } @else {
-            <svg-placeholder-image
-              class="image-place-holder"
-            ></svg-placeholder-image>
-          }
-        </div>
-        <div class="card-title">{{ title }}</div>
-        <div class="card-summary">{{ summary }}</div>
-      </div>
+      <div class="card-title">{{ title }}</div>
+      <div class="card-summary">{{ summary }}</div>
     </div>
-  }
+  </a>
+} @else {
+  <div class="list-item" target="_blank">
+    <div class="card">
+      <div class="card-image-wrapper">
+        @if (!!imagePath) {
+          <img src="{{ imagePath }}" mat-card-image width="100%" />
+        } @else {
+          <svg-placeholder-image
+            class="image-place-holder"
+          ></svg-placeholder-image>
+        }
+      </div>
+      <div class="card-title">{{ title }}</div>
+      <div class="card-summary">{{ summary }}</div>
+    </div>
+  </div>
+}

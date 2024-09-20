@@ -8,9 +8,8 @@ describe('IconButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SvgIconButtonComponent]
-    })
-    .compileComponents();
+      declarations: [SvgIconButtonComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SvgIconButtonComponent);
     component = fixture.componentInstance;
