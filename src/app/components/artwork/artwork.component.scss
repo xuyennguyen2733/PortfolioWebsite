@@ -16,3 +16,21 @@
   @include mat.elevation(2);
   transition: 0.5s;
 }
+
+.video {
+  margin: auto;
+  margin-top: 3rem;
+  width: 720px;
+  height: 480px;
+}
+
+.video-title {
+  margin: auto;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.video-card {
+  height: fit-content;
+  overflow: auto;
+}

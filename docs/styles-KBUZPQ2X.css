@@ -669,11 +669,11 @@ app-side-bar button:first-of-type {
     0 1px 5px #0000001f;
   background-color: #fff;
 }
-app-svg-icon {
+svg-icon {
   width: 100%;
   height: 100%;
 }
-app-svg-icon svg {
+svg-icon svg {
   color: #ba005c;
   font-weight: bolder;
 }

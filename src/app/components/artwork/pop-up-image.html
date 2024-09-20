@@ -1,0 +1,10 @@
+<h2 style="display: flex; justify-content: center; align-items: center;" mat-dialog-title>
+    {{title || "My drawing"}}
+</h2>
+<mat-divider></mat-divider>
+<mat-dialog-content>
+    <img style="width: 100%;" [src]="imagePath" />
+</mat-dialog-content>
+<mat-dialog-actions>
+    <a mat-raised-button [href]="downloadPath || imagePath" target="_blank" [download]="downloadName">Download</a>
+</mat-dialog-actions>

@@ -1,85 +1,59 @@
-<mat-card>
-  <mat-grid-list cols="3">
-    <mat-grid-tile>
-      <div class="image-card">
-        <img
-          style="width: 100%"
-          mat-card-image
-          src="images\2d-arts\20190510_213117.jpg"
-        />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="image-card">
-        <img
-          style="width: 100%"
-          mat-card-image
-          src="images\2d-arts\20191011_031313.jpg"
-        />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="image-card">
-        <img
-          style="width: 100%"
-          mat-card-image
-          src="images\2d-arts\20191011_031604.jpg"
-        />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="image-card">
-        <img
-          style="width: 100%"
-          mat-card-image
-          src="images\2d-arts\20210714_022552.jpg"
-        />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="image-card">
-        <img
-          style="width: 100%"
-          mat-card-image
-          src="images\2d-arts\20230108_140402.jpg"
-        />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="image-card">
-        <img
-          style="width: 100%"
-          mat-card-image
-          src="images\2d-arts\penup_1690585091435712.jpg"
-        />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="image-card">
-        <img
-          style="width: 100%"
-          mat-card-image
-          src="images\2d-arts\penup_1706318368879502.jpg"
-        />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="image-card">
-        <img
-          style="width: 100%"
-          mat-card-image
-          src="images\2d-arts\penup_1706318415146002.jpg"
-        />
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="image-card">
-        <img
-          style="width: 100%"
-          mat-card-image
-          src="images\2d-arts\UpRightAngel.png"
-        />
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-</mat-card>
+<mat-tab-group>
+  <mat-tab label="2D Arts">
+    <mat-card>
+      <mat-grid-list cols="3">
+        @for (preview of artPreviews2D; track preview) {
+          <mat-grid-tile>
+            <div (click)="openDialog(preview.imagePath, preview.title, preview.downloadPath)" class="image-card">
+              <img
+                style="width: 100%"
+                mat-card-image
+                src={{preview.imagePath}}
+              />
+            </div>
+          </mat-grid-tile>
+        }
+      </mat-grid-list>
+    </mat-card>
+    
+  </mat-tab>
+  <mat-tab label="3D Arts">
+    <mat-card>
+      <mat-grid-list cols="2">
+        @for (preview of artPreviews3D; track preview) {
+          <mat-grid-tile>
+            <div (click)="openDialog(preview.imagePath, preview.title, preview.downloadPath)" class="image-card">
+              <img
+                style="width: 100%"
+                mat-card-image
+                src={{preview.imagePath}}
+              />
+            </div>
+          </mat-grid-tile>
+        }
+        
+      </mat-grid-list>
+    </mat-card>
+    
+  </mat-tab>
+  <mat-tab label="Videos">
+    <mat-card >
+      <mat-card-header class="video-title">
+        <mat-card-title >
+          T Day
+        </mat-card-title>
+        
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="text-align: center;">
+        <div>
+          <iframe class="video" [src]="safeUrl" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-description">
+          <p>A fun project my team and I created for the Machinima class at the University of Utah.</p>
+          <p>This short 3D animated film offers a playful yet intense portrayal of a baby turtle’s hatching experience on Ascension Island. While the story is exaggerated and packed with action, it captures the very real dangers turtles face from the moment they emerge. Through a fun and fictional lens, we highlight the challenges these creatures must overcome to reach the ocean and survive.</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-tab>
+</mat-tab-group>

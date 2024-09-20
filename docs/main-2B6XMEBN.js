@@ -12031,7 +12031,7 @@ var ur = class i {
   };
   static ɵcmp = C({
     type: i,
-    selectors: [["app-svg-icon"]],
+    selectors: [["svg-icon"]],
     decls: 3,
     vars: 0,
     consts: [
@@ -12129,7 +12129,7 @@ var hr = class i {
     template: function (r, e) {
       r & 1 &&
         (l(0, "mat-toolbar", 0)(1, "button", 1)(2, "div", 2)(3, "div", 3),
-        I(4, "app-svg-icon"),
+        I(4, "svg-icon"),
         u(),
         l(5, "div", 4),
         p(6, "Xuyen Nguyen"),

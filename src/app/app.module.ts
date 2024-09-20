@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { WebAppComponent } from './components/web-app/web-app.component';
-import { ArtworkComponent } from './components/artwork/artwork.component';
+import { ArtworkComponent, PopUpImage } from './components/artwork/artwork.component';
 import { OthersComponent } from './components/others/others.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -33,6 +33,8 @@ import {
 import { SvgPlaceholderImageComponent } from './shared/svg-placeholder-image/svg-placeholder-image.component';
 import { SvgIconButtonComponent } from './utils/svg-icon-button/icon-button.component';
 import { LinkCardComponent } from './utils/link-card/link-card.component';
+import { MatTab, MatTabGroup } from '@angular/material/tabs';
+import { MatDialogActions, MatDialogContent, MatDialogTitle } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,7 @@ import { LinkCardComponent } from './utils/link-card/link-card.component';
     SvgPlaceholderImageComponent,
     SvgIconButtonComponent,
     LinkCardComponent,
+    PopUpImage
   ],
   imports: [
     BrowserModule,
@@ -65,6 +68,11 @@ import { LinkCardComponent } from './utils/link-card/link-card.component';
     MatChipSet,
     MatChipGrid,
     MatChipRow,
+    MatTab,
+    MatTabGroup,
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
