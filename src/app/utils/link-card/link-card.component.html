@@ -1,11 +1,11 @@
 @if (!!link) {
     <a
-      class="project-list-item"
+      class="list-item"
       href="{{ link }}"
       target="_blank"
     >
-      <div class="project-card">
-        <div class="project-card-image-wrapper">
+      <div class="card">
+        <div class="card-image-wrapper">
           @if (imagePath) {
             <img
               src="{{ imagePath }}"
@@ -18,14 +18,14 @@
             ></svg-placeholder-image>
           }
         </div>
-        <div class="project-card-title">{{ title }}</div>
-        <div class="project-card-summary">{{ summary }}</div>
+        <div class="card-title">{{ title }}</div>
+        <div class="card-summary">{{ summary }}</div>
       </div>
     </a>
   } @else {
-    <div class="project-list-item" target="_blank">
-      <div class="project-card">
-        <div class="project-card-image-wrapper">
+    <div class="list-item" target="_blank">
+      <div class="card">
+        <div class="card-image-wrapper">
           @if (!!imagePath) {
             <img
               src="{{ imagePath }}"
@@ -38,8 +38,8 @@
             ></svg-placeholder-image>
           }
         </div>
-        <div class="project-card-title">{{ title }}</div>
-        <div class="project-card-summary">{{ summary }}</div>
+        <div class="card-title">{{ title }}</div>
+        <div class="card-summary">{{ summary }}</div>
       </div>
     </div>
   }

@@ -27,29 +27,29 @@ export class WebAppComponent implements AfterViewInit {
 
   projects: Project[] = [
     {
-      title: 'ASL Alphabet Recognition',
-      imagePath: 'images/web-preview/asl-alphabet-recognition.png',
-      link: 'https://xuyennguyen2733.github.io/asl-recognition/',
+      title: 'Signable - Capstone Project',
+      imagePath: 'images/web-preview/signable.png',
+      link: 'https://signable-ffg0eegcfngdgubn.westus2-01.azurewebsites.net/',
       summary:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, possimus.',
+        'This web app integrates machine learning solutions and 3D illustrations to teach the American Sign Language alphabet.',
     },
     {
       title: 'Chinese Typing Practice',
       imagePath: 'images/web-preview/typing-practice-preview.png',
       link: 'https://xuyennguyen2733.github.io/TypingPractice/',
       summary:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, possimus.',
+        'Inspired by Typer Shark! Deluxe, this tool helps users practice typing Chinese characters using the Bopomofo keyboard layout, commonly used in Taiwan.',
     },
     {
       title: 'Class Schedule Maker',
       imagePath: 'images/web-preview/class-scheduler.png',
       link: 'https://xuyennguyen2733.github.io/ClassSchedule/',
       summary:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, possimus.',
+        'This web app allows users to log there class information (such as class name, location, time, etc.) onto a weekly calendar.',
     },
     {
       title: 'Signaway - Learn Sign Language',
-      summary: 'Comming soon!',
+      summary: '(Comming soon!) Stemming from the idea of Signable, this app goes beyond the ASL alphabet by teaching users basic hand shapes and guiding them through signing words and phrases.',
     },
   ];
 
