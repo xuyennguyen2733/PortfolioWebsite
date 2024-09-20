@@ -20,8 +20,8 @@
 .video {
   margin: auto;
   margin-top: 3rem;
-  width: 720px;
-  height: 480px;
+  width: 45rem;
+  height: 30rem;
 }
 
 .video-title {
@@ -33,4 +33,16 @@
 .video-card {
   height: fit-content;
   overflow: auto;
+}
+
+.video-description {
+  text-align: left;
+  margin: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .video {
+    width: 25rem;
+    height: 16rem;
+  }
 }

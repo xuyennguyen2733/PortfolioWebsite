@@ -4,12 +4,22 @@
 $theme: mat.define-theme(
   (
     color: (
-      theme-type: dark,
+      theme-type: light,
       primary: mat.$rose-palette,
       tertiary: mat.$rose-palette,
     ),
   )
 );
+
+// $dark-theme: mat.define-theme(
+//   (
+//     color: (
+//       theme-type: dark,
+//       primary: mat.$rose-palette,
+//       tertiary: mat.$rose-palette,
+//     ),
+//   )
+// );
 
 // Include material core styles.
 @include mat.core();
@@ -19,3 +29,7 @@ $theme: mat.define-theme(
 :root {
   @include mat.all-component-themes($theme);
 }
+
+// .dark-theme {
+//   @include mat.all-component-colors($dark-theme)
+// }
