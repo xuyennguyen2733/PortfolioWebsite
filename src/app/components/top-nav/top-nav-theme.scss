@@ -5,6 +5,10 @@
     * {
       color: mat.get-theme-color($theme, primary);
     }
+    
+    mat-icon {
+      color: mat.get-theme-color($theme, primary);
+    }
 
     .top-nav {
       background: mat.get-theme-color($theme, primary-container);

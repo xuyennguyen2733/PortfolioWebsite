@@ -6,10 +6,10 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './top-nav.component.scss',
 })
 export class TopNavComponent {
-  isExtraSmallScreen: boolean = false;
+  isSmallScreen: boolean = false;
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.isExtraSmallScreen = window.innerWidth < 400;
+    this.isSmallScreen = window.innerWidth <= 500;
   }
 }
