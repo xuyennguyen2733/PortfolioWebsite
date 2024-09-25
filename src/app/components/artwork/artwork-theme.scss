@@ -1,0 +1,7 @@
+@use '@angular/material' as mat;
+
+@mixin theme($theme) {
+    .image-card {
+        border: 1px solid mat.get-theme-color($theme, outline-variant);
+    }
+}

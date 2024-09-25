@@ -3,6 +3,8 @@
 @use "./app/components/top-nav/top-nav-theme.scss";
 @use "./app/components/side-bar/side-bar-theme.scss";
 @use "./app/components/introduction/introduction-theme.scss";
+@use "./app/components/web-app/web-app-theme.scss";
+@use "./app/components/artwork/artwork-theme.scss";
 @use "./app/utils/link-card/link-card-theme.scss";
 
 // Styles for the docs app that are based on the current theme.
@@ -22,5 +24,7 @@
   @include top-nav-theme.theme($theme);
   @include side-bar-theme.theme($theme);
   @include introduction-theme.theme($theme);
+  @include web-app-theme.theme($theme);
+  @include artwork-theme.theme($theme);
   @include link-card-theme.theme($theme);
 }
