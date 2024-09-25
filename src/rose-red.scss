@@ -29,7 +29,3 @@ $theme: mat.define-theme(
 :root {
   @include mat.all-component-themes($theme);
 }
-
-// .dark-theme {
-//   @include mat.all-component-colors($dark-theme)
-// }
