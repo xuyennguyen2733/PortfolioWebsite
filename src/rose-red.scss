@@ -1,7 +1,7 @@
 @use "@angular/material" as mat;
 @use "app-theme";
 
-$theme: mat.define-theme(
+$light-theme: mat.define-theme(
   (
     color: (
       theme-type: light,
@@ -11,21 +11,33 @@ $theme: mat.define-theme(
   )
 );
 
-// $dark-theme: mat.define-theme(
-//   (
-//     color: (
-//       theme-type: dark,
-//       primary: mat.$rose-palette,
-//       tertiary: mat.$rose-palette,
-//     ),
-//   )
-// );
+$dark-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: mat.$rose-palette,
+      tertiary: mat.$rose-palette,
+    ),
+  )
+);
 
 // Include material core styles.
 @include mat.core();
-@include mat.color-variants-backwards-compatibility($theme);
-@include app-theme.theme($theme);
 
-:root {
-  @include mat.all-component-themes($theme);
+// :root {
+//   @include mat.all-component-themes($theme);
+// }
+
+// Add a class for dark theme
+.dark-theme {
+  @include mat.color-variants-backwards-compatibility($dark-theme);
+  @include app-theme.theme($dark-theme);
+  @include mat.all-component-themes($dark-theme)
+}
+
+// Add a class for dark theme
+.light-theme {
+  @include mat.color-variants-backwards-compatibility($light-theme);
+  @include app-theme.theme($light-theme);
+  @include mat.all-component-themes($light-theme)
 }

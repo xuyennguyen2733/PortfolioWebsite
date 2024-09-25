@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject} from '@angular/core';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -7,9 +8,16 @@ import { Component, HostListener } from '@angular/core';
 })
 export class TopNavComponent {
   isSmallScreen: boolean = false;
+  
+  private themeService: ThemeService = inject(ThemeService);
 
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.isSmallScreen = window.innerWidth <= 500;
   }
+  
+  toggleTheme() {
+    this.themeService.updateTheme()
+  }
 }
+

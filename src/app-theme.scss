@@ -21,23 +21,26 @@
     }
   }
   
+  .main-content {
+    background-color: mat.get-theme-color($theme, background);
+  }
+  
   ::-webkit-scrollbar {
     width: 0.5rem;
   }
 
   ::-webkit-scrollbar-track {
-    background-color: rgba(mat.get-theme-color($theme, secondary-container), 0.3);
-    border-radius: 1rem;
+    background-color: mat.get-theme-color($theme, surface);
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: rgba(mat.get-theme-color($theme, outline-variant),0.7); /* Color of the scrollbar */
+    background-color: mat.get-theme-color($theme, outline-variant); /* Color of the scrollbar */
     border-radius: 1rem;
     @include mat.elevation(2);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(mat.get-theme-color($theme, outline-variant),1.0); /* Color of the scrollbar on hover */
+    background-color: mat.get-theme-color($theme, secondary-fixed-dim); /* Color of the scrollbar on hover */
   }
 
   @include top-nav-theme.theme($theme);

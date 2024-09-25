@@ -81,6 +81,96 @@ Let's create a horizontal panel across the top of the page using the component m
 
 Since the default theme color isn't the shade I like, I customized it by creating a file named theme.scss in the same folder as style.scss, then declare it as one of the styles in angular.json (together with style.scss)
 
+4. Implementing theme change:
+
+This feature is mainly used for changing to dark mode or light mode
+
+    Step 1: Define a dark theme
+    - In rose-red.scss, 
+    
+        -under the defined $theme, define a dark theme a similar manner, but use "dark" for theme-type
+    
+            $dark-theme: mat.define-theme(
+                (
+                    color: (
+                        theme-type: dark,
+                        primary: mat.$rose-palette,
+                        tertiary: mat.$rose-palette,
+                    ),
+                )
+            );
+        
+        - under the class :root, create another class, say ".dark-theme", with the following settings:
+        
+             // Add a class for dark theme
+            .dark-theme {
+                @include mat.color-variants-backwards-compatibility($dark-theme);
+                @include app-theme.theme($dark-theme);
+                @include mat.all-component-themes($dark-theme)
+            }
+            
+        - (Optional) replace the class :root with this class:
+        
+            // Add a class for dark theme
+            .light-theme {
+                @include mat.color-variants-backwards-compatibility($light-theme);
+                @include app-theme.theme($light-theme);
+                @include mat.all-component-themes($light-theme)
+            }
+            
+            Where $light-theme is defined identical to $theme
+            
+    Step 2: Create a theme service
+    - In the terminal,
+    
+        RUN ng g s services/theme
+    
+        To create a theme service in the folder services
+    
+    - Navigate the file theme.service.ts, and add this following content to it:
+    
+        import { Injectable, signal } from '@angular/core';
+
+
+        @Injectable({
+        providedIn: 'root'
+        })
+        export class ThemeService {
+            themeSignal = signal<string>("dark-theme"); // pick any available theme
+            
+            updateTheme() {
+                this.themeSignal.update(value => value === "dark-theme" ? "light-theme" : "dark-theme" );
+            }
+        }
+      
+    Step 3: Inject and use the service's functions to set/switch themes  
+    - In app.component.ts, inject the theme service:
+    
+        themeService: ThemeService = inject(ThemeService)    
+        
+    - Apply the default theme
+        - Now, you can use the functions from ThemeService inside app.component.html
+        - In app.component.html, add the attribute `[ngClass]="themeService.themeSignal()"` to any parent tag whose children you want to apply the theme on.
+        - Example:
+        
+            <div [ngClass]="themeService.themeSignal()">
+                [everything under here will adopt the theme]
+            </div>
+            
+        - By this step, your app should adopt whichever theme set as default to themeSignal. In this case, it's the dark-theme.
+    
+    - Create a theme switching component
+        - This could be anything from a <button> to a <div> with a click event set to updateTheme()
+        - Example:
+        
+            <button mat-icon-button (click)="themeService.updateTheme()">toggle dark mode</button>
+    
+        - Now, Clicking the button should change the signal between "dark-theme" and "light-theme" which will set the class of your component to be ".dark-theme" or ".light-theme", hence switching between dark and light modes.
+        
+    - Some colors may not look right in light or dark modes. Don't panic. Navigate the component with the off color. Then, in the correct theme file, set it to a color from your theme palette using mat.get-theme-color. Avoid hard-coding a specific color like 'white', '#2D3AAA', etc. because they won't change when themes change.
+        
+    CONGRATULATIONS! You've implemented a theme picker!
+
 III. Troubleshoot
 
 1. Button UI not applied
