@@ -16,6 +16,7 @@
           <mat-chip
             *ngFor="let chip of introductionChipData"
             style="margin: 0.2rem"
+            [matTooltip]="getJoinedText(isSmallScreen ? chip.textElements : null)"
           >
             <span
               [hidden]="isSmallScreen"

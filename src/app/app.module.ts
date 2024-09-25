@@ -45,6 +45,7 @@ import {
   MatDialogContent,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { MatTooltip } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import {
     MatDialogTitle,
     MatDialogContent,
     MatDialogActions,
+    MatTooltip
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

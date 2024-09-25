@@ -42,6 +42,15 @@ export class IntroductionComponent {
     this.isExtraSmallScreen = window.innerWidth <= 360;
     console.log('x-small', this.isExtraSmallScreen);
   }
+  
+  getJoinedText(textElements: TextElement[] | null) {
+    if (!!!textElements) return;
+    let joinedText = "";
+    for (let element of textElements) {
+      joinedText += ` ${element.text}`;
+    }
+    return joinedText;
+  }
 
   ngOnInit() {
     this.onResize();
