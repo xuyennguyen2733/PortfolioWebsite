@@ -4,6 +4,15 @@
   mat-card.container {
     background-color: mat.get-theme-color($theme, inverse-on-surface);
   }
+  
+  .container mat-card {
+    background-color: mat.get-theme-color($theme, background);
+  }
+  
+  .container mat-card:hover {
+    background-color: mat.get-theme-color($theme, background);
+  }
+  
   mat-divider {
     border: 1px solid mat.get-theme-color($theme, outline-variant);
   }
