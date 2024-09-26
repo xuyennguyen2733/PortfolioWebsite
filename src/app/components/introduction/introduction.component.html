@@ -17,6 +17,8 @@
             *ngFor="let chip of introductionChipData"
             style="margin: 0.2rem"
             [matTooltip]="getJoinedText(isSmallScreen ? chip.textElements : null)"
+            matTooltipTouchGestures="on"
+            matTooltipPosition="above"
           >
             <span
               [hidden]="isSmallScreen"
@@ -100,7 +102,7 @@
           <div>University of Utah</div>
           <div>Bachelor of Science in Computer Science</div>
         </div>
-        <div style="text-align: right;">
+        <div class="date-time">
           <div>Salt Lake City, Utah</div>
           <div>May 2024</div>
         </div>
@@ -177,7 +179,7 @@
               <div style="font-weight: bold">Software Engineer</div>
               <div>BlueSkyTech</div>
             </div>
-            <div style="text-align: right;">
+            <div class="date-time">
               <div>March 2024 - present</div>
               <div>(Remote)</div>
             </div>
@@ -199,7 +201,7 @@
               <div style="font-weight: bold">Full-Stack Developer</div>
               <div>University of Utah - Umail</div>
             </div>
-            <div style="text-align: right;">
+            <div class="date-time">
               <div>November 2021 - June 2024</div>
               <div>Salt Lake City, Utah</div>
             </div>

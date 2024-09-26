@@ -94,6 +94,14 @@ mat-card {
   justify-content: space-between;
 }
 
+.date-time {
+  text-align: right;
+}
+
+ul {
+  padding: 0 0 0 1rem;
+}
+
 @media only screen and (max-width: 475px) {
   .title-greeting {
     width: 10rem;
@@ -113,6 +121,10 @@ mat-card {
   .education-container,
   .experience-header {
     flex-direction: column;
+  }
+  
+  .date-time {
+    text-align: left;
   }
 
   .title-text {

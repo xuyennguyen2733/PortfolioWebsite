@@ -15,8 +15,8 @@ interface IntroChip {
   styleUrl: './introduction.component.scss',
 })
 export class IntroductionComponent {
-  isSmallScreen: boolean = false;
-  isExtraSmallScreen: boolean = false;
+  isSmallScreen: boolean = window.innerWidth <= 540;
+  isExtraSmallScreen: boolean = window.innerWidth <= 360;
   introductionChipData: IntroChip[] = [
     { textElements: [{ text: 'Full-time software engineer' }], icon: '👩‍💻' },
     { textElements: [{ text: 'Part-time game developer' }], icon: '🎮' },
@@ -40,7 +40,6 @@ export class IntroductionComponent {
   onResize() {
     this.isSmallScreen = window.innerWidth <= 540;
     this.isExtraSmallScreen = window.innerWidth <= 360;
-    console.log('x-small', this.isExtraSmallScreen);
   }
   
   getJoinedText(textElements: TextElement[] | null) {
