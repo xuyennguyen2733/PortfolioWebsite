@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   
   ngOnInit() {
     const documentElement = document.documentElement;
+    this.themeService.setTheme(localStorage.getItem('theme') || 'dark-theme')
     documentElement?.classList.add(this.themeService.themeSignal());
   }
 }

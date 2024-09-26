@@ -25,6 +25,7 @@ export class TopNavComponent {
     documentElement?.classList.remove(this.themeService.themeSignal())
     this.themeService.updateTheme()
     documentElement?.classList.add(this.themeService.themeSignal())
+    localStorage.setItem('theme', this.getTheme())
   }
 }
 
