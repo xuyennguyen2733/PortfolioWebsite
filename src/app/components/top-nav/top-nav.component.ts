@@ -16,6 +16,10 @@ export class TopNavComponent {
     this.isSmallScreen = window.innerWidth <= 500;
   }
   
+  getTheme() {
+    return this.themeService.themeSignal()
+  }
+  
   toggleTheme() {
     const documentElement = document.querySelector(':root')
     documentElement?.classList.remove(this.themeService.themeSignal())
