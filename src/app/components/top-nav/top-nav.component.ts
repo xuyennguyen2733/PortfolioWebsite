@@ -7,7 +7,7 @@ import { ThemeService } from '../../services/theme.service';
   styleUrl: './top-nav.component.scss',
 })
 export class TopNavComponent {
-  isSmallScreen: boolean = false;
+  isSmallScreen: boolean = window.innerWidth <= 500;
   
   private themeService: ThemeService = inject(ThemeService);
 
