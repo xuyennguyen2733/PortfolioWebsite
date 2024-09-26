@@ -17,7 +17,10 @@ export class TopNavComponent {
   }
   
   toggleTheme() {
+    const documentElement = document.querySelector(':root')
+    documentElement?.classList.remove(this.themeService.themeSignal())
     this.themeService.updateTheme()
+    documentElement?.classList.add(this.themeService.themeSignal())
   }
 }
 

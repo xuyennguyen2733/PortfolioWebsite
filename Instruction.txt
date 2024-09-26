@@ -209,3 +209,36 @@ Symptom: when updating the grid ratio when window is resized, this error appeare
 Solution:
 
 - use ChangeDetectorRef to initiate change detection anytime rowHeight is change.
+
+5. Themes not applied to :root
+
+Symptom: certain components (pop-up-image) aren't applied theme because we removed the root styling:
+
+    :root {
+        @include mat.all-component-themes($dark-theme); // theme must match the default themeSignal
+    }
+
+Solution:
+
+- Put the root component back
+- Navigate the .ts file where you implement the logic of the theme switching button (top-nav.components.ts in this case)
+- For the theme switching function (toggleTheme() in this case), do something like this
+
+    toggleTheme() {
+        // line 1
+        const documentElement = document.querySelector(':root')
+        // line 2
+        documentElement?.classList.remove(this.themeService.themeSignal())
+        // line 3
+        this.themeService.updateTheme()
+        // line 4
+        documentElement?.classList.add(this.themeService.themeSignal())
+    } 
+    
+- Explain: the theme class needs to be added to the root component.
+    - Line 1 retrieves the root component
+    - Line 2 removes the current theme class from the root
+    - Line 3 switches to the opposite theme
+    - Line 4 adds the new theme class to the root
+    
+- This way, *every single* component in your website will be applied the theme. There will be no need for a parent tag wrapping everything up in app.component.html
