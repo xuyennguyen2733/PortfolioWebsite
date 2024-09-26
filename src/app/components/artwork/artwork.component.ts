@@ -24,62 +24,62 @@ export class ArtworkComponent {
 
   artPreviews2D: ArtPreview[] = [
     {
-      imagePath: 'images/2d-arts/20190510_213117.jpg',
+      imagePath: 'images/2d-arts/20190510_213117.webp',
       title: 'Reindeer Chocolate Container',
     },
     {
-      imagePath: 'images/2d-arts/20191011_031313.jpg',
+      imagePath: 'images/2d-arts/20191011_031313.webp',
       title: 'Dad',
     },
     {
-      imagePath: 'images/2d-arts/20191011_031604.jpg',
+      imagePath: 'images/2d-arts/20191011_031604.webp',
       title: 'Mom',
     },
     {
-      imagePath: 'images/2d-arts/20210714_022552.jpg',
+      imagePath: 'images/2d-arts/20210714_022552.webp',
       title: 'Angry Sprite',
     },
     {
-      imagePath: 'images/2d-arts/20230108_140402.jpg',
+      imagePath: 'images/2d-arts/20230108_140402.webp',
       title: 'Fox on the Ceiling',
     },
     {
-      imagePath: 'images/2d-arts/balance-2.png',
+      imagePath: 'images/2d-arts/balance-2.webp',
     },
     {
-      imagePath: 'images/2d-arts/complete-design.png',
+      imagePath: 'images/2d-arts/complete-design.webp',
     },
     {
-      imagePath: 'images/2d-arts/penup_1706318368879502.jpg',
+      imagePath: 'images/2d-arts/penup_1706318368879502.webp',
       title: 'Shirt Biter',
     },
     {
-      imagePath: 'images/2d-arts/penup_1706318415146002.jpg',
+      imagePath: 'images/2d-arts/penup_1706318415146002.webp',
       title: 'Ninja Lead',
     },
   ];
 
   artPreviews3D: ArtPreview[] = [
     {
-      imagePath: 'images/3d-arts/scooter.png',
+      imagePath: 'images/3d-arts/scooter.webp',
       downloadPath:
         'https://drive.google.com/file/d/1o2LlOj4GUUE7DuFeem90_OkkUrpfMFBt/view?usp=sharing',
       title: 'A Pink Scooter',
     },
     {
-      imagePath: 'images/3d-arts/ninja-lead.png',
+      imagePath: 'images/3d-arts/ninja-lead.webp',
       downloadPath:
         'https://drive.google.com/file/d/1LtFjYHlNEpXZfkPJgxYq1rFx2RN0GJWh/view?usp=sharing',
       title: 'Ninja Lead - Who Rides the Scooter!',
     },
     {
-      imagePath: 'images/3d-arts/pagoda.png',
+      imagePath: 'images/3d-arts/pagoda.webp',
       downloadPath:
         'https://drive.google.com/file/d/1q6ysS2Gwie9guYgZFU4-dPXsT_-q06lE/view?usp=sharing',
       title: 'A Pagoda',
     },
     {
-      imagePath: 'images/3d-arts/carriage.png',
+      imagePath: 'images/3d-arts/carriage.webp',
       downloadPath:
         'https://drive.google.com/file/d/1YTdC36d23OsAIWAkJ193vso5rnlXHPvN/view?usp=sharing',
       title: 'A Carriage',

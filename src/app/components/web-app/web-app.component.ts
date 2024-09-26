@@ -28,21 +28,21 @@ export class WebAppComponent implements AfterViewInit {
   projects: Project[] = [
     {
       title: 'Signable - Capstone Project',
-      imagePath: 'images/web-preview/signable.png',
+      imagePath: 'images/web-preview/signable.webp',
       link: 'https://signable-ffg0eegcfngdgubn.westus2-01.azurewebsites.net/',
       summary:
         'This web app integrates machine learning solutions and 3D illustrations to teach the American Sign Language alphabet.',
     },
     {
       title: 'Chinese Typing Practice',
-      imagePath: 'images/web-preview/typing-practice-preview.png',
+      imagePath: 'images/web-preview/typing-practice-preview.webp',
       link: 'https://xuyennguyen2733.github.io/TypingPractice/',
       summary:
         'Inspired by Typer Shark! Deluxe, this tool helps users practice typing Chinese characters using the Bopomofo keyboard layout, commonly used in Taiwan.',
     },
     {
       title: 'Class Schedule Maker',
-      imagePath: 'images/web-preview/class-scheduler.png',
+      imagePath: 'images/web-preview/class-scheduler.webp',
       link: 'https://xuyennguyen2733.github.io/ClassSchedule/',
       summary:
         'This web app allows users to log there class information (such as class name, location, time, etc.) onto a weekly calendar.',
