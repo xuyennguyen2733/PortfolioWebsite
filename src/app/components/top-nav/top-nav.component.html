@@ -15,18 +15,7 @@
   <nav>
     <!-- <a mat-button routerLink="others" routerLinkActive="active">Other</a> -->
     @if (!isSmallScreen) {
-      <button mat-icon-button matTooltip="Example home icon" (click)="toggleTheme()">
-        @if (getTheme() == 'dark-theme') {
-          <span class="material-symbols-outlined">
-            dark_mode
-          </span>
-        }
-        @else {
-          <span class="material-symbols-outlined">
-            light_mode
-          </span>
-        }
-      </button>
+      
       <a mat-button routerLink="web-app" routerLinkActive="active"><mat-icon>web</mat-icon>Web App</a>
       <a mat-button routerLink="artwork" routerLinkActive="active"><mat-icon>brush</mat-icon>Artwork</a>
       <a mat-button href="https://github.com/xuyennguyen2733" target="_blank">
@@ -59,5 +48,17 @@
         <svg-github-icon></svg-github-icon>
       </a>
     }
+    <button mat-icon-button matTooltip="Example home icon" (click)="toggleTheme()">
+      @if (getTheme() == 'dark-theme') {
+        <span class="material-symbols-outlined">
+          dark_mode
+        </span>
+      }
+      @else {
+        <span class="material-symbols-outlined">
+          light_mode
+        </span>
+      }
+    </button>
   </nav>
 </mat-toolbar>

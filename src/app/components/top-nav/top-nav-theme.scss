@@ -9,6 +9,10 @@
     mat-icon {
       color: mat.get-theme-color($theme, primary);
     }
+    
+    a[mat-button], a[mat-icon-button], button[mat-icon-button] {
+      @include mat.elevation(1);
+    }
 
     .top-nav {
       background: mat.get-theme-color($theme, primary-container);
