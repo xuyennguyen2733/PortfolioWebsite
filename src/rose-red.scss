@@ -30,7 +30,6 @@ $dark-theme: mat.define-theme(
 
 .dark-theme {
   @include mat.all-component-themes($dark-theme)
-  
 }
 
 // Add a class for dark theme
