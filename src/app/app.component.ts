@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ThemeService } from './services/theme.service';
 
 @Component({
@@ -6,11 +6,16 @@ import { ThemeService } from './services/theme.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'PortfolioWebsite';
   private themeService: ThemeService = inject(ThemeService)
   
   getTheme() {
     return this.themeService.themeSignal();
+  }
+  
+  ngOnInit() {
+    const documentElement = document.documentElement;
+    documentElement?.classList.add(this.themeService.themeSignal());
   }
 }
