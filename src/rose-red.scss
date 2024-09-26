@@ -21,20 +21,20 @@ $dark-theme: mat.define-theme(
   )
 );
 
+
 // Include material core styles.
 @include mat.core();
 
-// Add a class for dark theme
+@include mat.color-variants-backwards-compatibility($dark-theme);
+@include app-theme.theme($dark-theme);
+
 .dark-theme {
-  @include mat.color-variants-backwards-compatibility($dark-theme);
-  @include app-theme.theme($dark-theme);
   @include mat.all-component-themes($dark-theme)
   
 }
 
 // Add a class for dark theme
 .light-theme {
-  @include mat.color-variants-backwards-compatibility($light-theme);
   @include app-theme.theme($light-theme);
   @include mat.all-component-themes($light-theme)
 }
