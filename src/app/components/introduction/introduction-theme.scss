@@ -13,12 +13,15 @@
     background-color: mat.get-theme-color($theme, background);
   }
   
-  
+  button[mat-fab], button[mat-mini-fab] {
+    background-color: mat.get-theme-color($theme, tertiary);
+    color:  mat.get-theme-color($theme, on-tertiary);
+  }
   
   mat-divider {
     border: 1px solid mat.get-theme-color($theme, outline-variant);
   }
   .my-name {
-    color: mat.get-theme-color($theme, on-primary-fixed-variant);
+    color: mat.get-theme-color($theme, primary);
   }
 }

@@ -5,6 +5,10 @@ mat-card {
   overflow: hidden;
 }
 
+.container {
+  margin-bottom: 5rem;
+}
+
 .header {
   justify-content: space-around;
   margin-bottom: 3rem;
@@ -96,6 +100,17 @@ mat-card {
 
 .date-time {
   text-align: right;
+}
+
+.print-resume-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 2;
+}
+
+mat-menu {
+  margin: 1rem;
 }
 
 ul {

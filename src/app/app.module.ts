@@ -27,6 +27,8 @@ import {
 import {
   SvgGitHubIconComponent,
   SvgIconComponent,
+  SvgMsWordComponent,
+  SvgPdfIconComponent,
 } from './shared/svg-icon/svg-icon.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
@@ -46,6 +48,8 @@ import {
   MatDialogTitle,
 } from '@angular/material/dialog';
 import { MatTooltip } from '@angular/material/tooltip';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatLabel } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -56,6 +60,8 @@ import { MatTooltip } from '@angular/material/tooltip';
     OthersComponent,
     SvgIconComponent,
     SvgGitHubIconComponent,
+    SvgMsWordComponent,
+    SvgPdfIconComponent,
     SideBarComponent,
     IntroductionComponent,
     SvgPlaceholderImageComponent,
@@ -84,7 +90,9 @@ import { MatTooltip } from '@angular/material/tooltip';
     MatDialogTitle,
     MatDialogContent,
     MatDialogActions,
-    MatTooltip
+    MatTooltip,
+    MatMenuModule,
+    MatLabel
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

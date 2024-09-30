@@ -3,7 +3,7 @@
 .main-content {
   padding: 2rem;
   height: fit-content;
-  overflow: auto;
+  // overflow: auto;
   max-width: 70rem;
   margin: auto;
 }
@@ -21,6 +21,6 @@
 main {
   display: flex;
   flex-direction: row;
-  overflow: auto;
+  // overflow: auto;
   height: calc(100vh - 3.5rem);
 }

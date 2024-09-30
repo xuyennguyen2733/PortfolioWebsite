@@ -1,3 +1,10 @@
+<ng-template #msword>
+  <svg-msword-icon></svg-msword-icon>
+</ng-template>
+<ng-template #pdf>
+  <svg-pdf-icon></svg-pdf-icon>
+</ng-template>
+
 <mat-card class="container">
   <mat-card-header class="header">
     <mat-card-title class="title-text">
@@ -69,6 +76,22 @@
       Start taking action <span>now</span>, and motivation will follow, driving
       you forward."
     </p>
+  </div>
+  <div class="print-resume-button" matTooltip="Download my resume" >
+    <button [hidden]="isSmallScreen" mat-fab [matMenuTriggerFor]="printMenu"><mat-icon>print</mat-icon></button>
+    <button [hidden]="!isSmallScreen" mat-mini-fab [matMenuTriggerFor]="printMenu"><mat-icon>print</mat-icon></button>
+    <mat-menu #printMenu="matMenu">
+      <div mat-menu-item disabled>Download My Resume</div>
+      <mat-divider></mat-divider>
+      <a mat-menu-item href="files/Xuyen-Nguyen-Resume.docx" download><app-icon-button
+        text="Docx"
+        [svgIconTemplate]="msword"
+      ></app-icon-button></a>
+      <a mat-menu-item href="files/Xuyen-Nguyen-Resume.PDF" download><app-icon-button
+        text="PDF"
+        [svgIconTemplate]="pdf"
+      ></app-icon-button></a>
+    </mat-menu>
   </div>
   <mat-card-content>
     <div style="margin: 0.5rem; font-size: small">
