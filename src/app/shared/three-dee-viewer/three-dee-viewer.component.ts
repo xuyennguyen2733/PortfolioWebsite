@@ -22,6 +22,7 @@ export class ThreeDeeViewerComponent implements OnInit {
   private boundingBox!: THREE.LineSegments<THREE.EdgesGeometry<THREE.BoxGeometry>, THREE.LineBasicMaterial, THREE.Object3DEventMap>;
   
   @Input() path: string | undefined;
+  @Input() ambientIntensity?: number;
   
   constructor () {
     this.currentObject = null;
@@ -49,7 +50,7 @@ export class ThreeDeeViewerComponent implements OnInit {
   initThreeJS() {    
     // Create a scene
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color('transparent')
+    // this.scene.background = new THREE.Color('grey')
     
     // Create camera
     this.camera = new THREE.PerspectiveCamera(
@@ -64,8 +65,9 @@ export class ThreeDeeViewerComponent implements OnInit {
     this.camera.updateProjectionMatrix();
     
     // Create a renderer
-    this.renderer = new THREE.WebGLRenderer({antialias: true});
+    this.renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
     this.renderer.setSize(this.threeJsContainer!.clientWidth, this.threeJsContainer!.clientHeight);
+    this.renderer.setClearColor('white', 0)
     this.renderer.shadowMap.enabled = true;
     this.threeJsContainer!.appendChild(this.renderer.domElement);
     
@@ -74,7 +76,7 @@ export class ThreeDeeViewerComponent implements OnInit {
     
     
     // Add Lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
+    const ambientLight = new THREE.AmbientLight(0xffffff, this.ambientIntensity || 1);
     this.scene.add(ambientLight);
     
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -119,10 +121,10 @@ export class ThreeDeeViewerComponent implements OnInit {
   }
   
   private loadModel() {
-    
+    console.log('loading', this.path)
     if (this.path && this.loader) {
       this.loader.load(
-        this.path, // file path
+        `${this.path}`, // file path
         (object) => { // onLoad function
           this.currentObject = object;
           
@@ -130,12 +132,12 @@ export class ThreeDeeViewerComponent implements OnInit {
             if ((child as THREE.Mesh).isMesh) {
               const mesh = child as THREE.Mesh;
               child.castShadow = true;
-              // child.receiveShadow = true;
+              child.receiveShadow = true;
               // Remove textures and materials if present
               
               // console.log('mat', (mesh));
               
-              mesh.material = new THREE.MeshStandardMaterial({ color: 0x999999 }); // Replace material with basic one
+              // mesh.material = new THREE.MeshStandardMaterial({ color: 0x999999 }); // Replace material with basic one
             }
             
           })
@@ -174,7 +176,7 @@ export class ThreeDeeViewerComponent implements OnInit {
     const maxDim = Math.max(size.x, size.y, size.z);
     const scale = this.viewDimension / maxDim;
     object.scale.set(scale, scale, scale);
-    object.position.set(0,-this.viewDimension/4,0);
+    object.position.set(0,-this.viewDimension/2,0);
   }
 
   @HostListener('window:resize', ['$event'])

@@ -11,6 +11,7 @@ interface ArtPreview {
   title?: string;
   description?: string;
   downloadPath?: string;
+  ambientIntensity?: number;
 }
 
 @Component({
@@ -68,21 +69,24 @@ export class ArtworkComponent {
     },
     {
       imagePath: 'images/3d-arts/ninja-lead.webp',
-      downloadPath: 'three-dee-models/ninja-fbx',
+      downloadPath: 'three-dee-models/ninja-lead.fbx',
         // 'https://drive.google.com/file/d/1LtFjYHlNEpXZfkPJgxYq1rFx2RN0GJWh/view?usp=sharing',
       title: 'Ninja Lead - Who Rides the Scooter!',
+      ambientIntensity: 3
     },
     {
       imagePath: 'images/3d-arts/pagoda.webp',
       downloadPath: 'three-dee-models/pagoda.fbx',
         // 'https://drive.google.com/file/d/1q6ysS2Gwie9guYgZFU4-dPXsT_-q06lE/view?usp=sharing',
       title: 'A Pagoda',
+      ambientIntensity: 5
     },
     {
       imagePath: 'images/3d-arts/carriage.webp',
       downloadPath: 'three-dee-models/carriage.fbx',
         // 'https://drive.google.com/file/d/1YTdC36d23OsAIWAkJ193vso5rnlXHPvN/view?usp=sharing',
       title: 'A Carriage',
+      ambientIntensity: 5
     },
   ];
 
@@ -92,9 +96,9 @@ export class ArtworkComponent {
     );
   }
 
-  openDialog(imagePath: string, title?: string, downloadPath?: string): void {
+  openDialog(imagePath: string, title?: string, downloadPath?: string, ambientIntensity?: number): void {
     const dialogRef = this.dialog.open(PopUpImage, {
-      data: { imagePath: imagePath, title: title, downloadPath: downloadPath },
+      data: { imagePath: imagePath, title: title, downloadPath: downloadPath, ambientIntensity: ambientIntensity },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
@@ -113,8 +117,13 @@ export class PopUpImage {
   readonly imagePath: string = this.data.imagePath;
   readonly title?: string = this.data.title;
   readonly downloadPath?: string = this.data.downloadPath;
-  downloadName: number | string = Date.now();
+  readonly ambientIntensity?: number = this.data.ambientIntensity;
+  downloadName: string = Date.now().toString();
 
+  constructor() {
+    this.onInit()
+  }
+  
   onInit() {
     if (!this.downloadPath) {
       const extension = this.imagePath.substring(

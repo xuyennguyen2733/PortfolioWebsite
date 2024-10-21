@@ -6,7 +6,7 @@
 </h2>
 <mat-dialog-content>
   @if (downloadPath) {
-    <app-three-dee-viewer [path]="downloadPath"></app-three-dee-viewer>
+    <app-three-dee-viewer [path]="downloadPath" [ambientIntensity]="ambientIntensity"></app-three-dee-viewer>
   }
   @else {
     <img style="height: 60vh" [src]="imagePath" />
