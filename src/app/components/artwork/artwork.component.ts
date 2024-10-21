@@ -102,7 +102,6 @@ export class ArtworkComponent {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('dialog closed');
     });
   }
 }

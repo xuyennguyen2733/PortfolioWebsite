@@ -19,6 +19,7 @@ export class ThreeDeeViewerComponent implements OnInit {
   private currentObject: THREE.Group<THREE.Object3DEventMap> | null;
   private viewDimension!: number;
   private threeJsContainer!: any;
+  private animationId?: number;
   
   @Input() path: string | undefined;
   @Input() ambientIntensity?: number;
@@ -33,7 +34,6 @@ export class ThreeDeeViewerComponent implements OnInit {
   ngOnInit(): void {
     this.threeJsContainer = document.querySelector('#threejs-container');
     this.viewDimension = Math.min(this.threeJsContainer?.clientHeight || 0, this.threeJsContainer?.clientWidth || 0);
-    console.log('init dim', this.viewDimension)
     
     this.initThreeJS();
     this.animate();
@@ -41,7 +41,6 @@ export class ThreeDeeViewerComponent implements OnInit {
   
   ngOnChanges() {
     if (this.loader) {
-      this.clearModel();
       this.loadModel();
     }
   }
@@ -86,7 +85,8 @@ export class ThreeDeeViewerComponent implements OnInit {
   }
   
   private animate() {
-    requestAnimationFrame(() => this.animate());
+    if (this.animationId) cancelAnimationFrame(this.animationId);
+    this.animationId = requestAnimationFrame(() => this.animate());
     
     const delta = this.clock.getDelta();
     if (this.mixer) {
@@ -120,7 +120,6 @@ export class ThreeDeeViewerComponent implements OnInit {
   }
   
   private loadModel() {
-    console.log('loading', this.path)
     if (this.path && this.loader) {
       this.loader.load(
         `${this.path}`, // file path
@@ -132,9 +131,6 @@ export class ThreeDeeViewerComponent implements OnInit {
               const mesh = child as THREE.Mesh;
               child.castShadow = true;
               child.receiveShadow = true;
-              // Remove textures and materials if present
-              
-              // console.log('mat', (mesh));
               
               // mesh.material = new THREE.MeshStandardMaterial({ color: 0x999999 }); // Replace material with basic one
             }
@@ -180,7 +176,6 @@ export class ThreeDeeViewerComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    console.log('change window size')
     // Update the view dimension
     this.viewDimension = Math.min(this.threeJsContainer?.clientHeight || 0, this.threeJsContainer?.clientWidth || 0);
 
@@ -190,13 +185,12 @@ export class ThreeDeeViewerComponent implements OnInit {
     // Update camera aspect ratio and projection matrix
     this.camera.aspect = this.threeJsContainer!.clientWidth / this.threeJsContainer!.clientHeight;
     this.camera.updateProjectionMatrix();
-
-    // // Resize the bounding box
-    // this.resizeBoundingBox();
-    
-    // // Rescale the current object to maintain the aspect ratio
-    // if (this.currentObject) {
-    //   this.rescaleObject(this.currentObject);
-    // }
+  }
+  
+  ngOnDestroy() {
+    if (this.animationId) {
+      cancelAnimationFrame(this.animationId);
+      this.clearModel();
+    }
   }
 }
