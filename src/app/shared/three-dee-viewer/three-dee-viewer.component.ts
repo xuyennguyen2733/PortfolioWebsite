@@ -19,7 +19,6 @@ export class ThreeDeeViewerComponent implements OnInit {
   private currentObject: THREE.Group<THREE.Object3DEventMap> | null;
   private viewDimension!: number;
   private threeJsContainer!: any;
-  private boundingBox!: THREE.LineSegments<THREE.EdgesGeometry<THREE.BoxGeometry>, THREE.LineBasicMaterial, THREE.Object3DEventMap>;
   
   @Input() path: string | undefined;
   @Input() ambientIntensity?: number;

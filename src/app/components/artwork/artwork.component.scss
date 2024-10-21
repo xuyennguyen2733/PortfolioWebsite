@@ -11,6 +11,9 @@
   width: 80%;
   height: 80%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 3%;
   @include mat.elevation(2);
   transition: 0.5s;
