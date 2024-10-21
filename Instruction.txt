@@ -242,3 +242,19 @@ Solution:
     - Line 4 adds the new theme class to the root
     
 - This way, *every single* component in your website will be applied the theme. There will be no need for a parent tag wrapping everything up in app.component.html
+
+6. Getting 404 when reloading or going to root/[child-url] directly from the browser's search bar
+
+- Symptom: when reloading or search for the url other than the root, the browser will redirect to 404.
+
+- For example, the root of this project is xuyennguyen2733.github.io/PortfolioWebsite. If the user search in the url search bar of the browser "xuyennguyen2733.github.io/PortfolioWebsite", the website successfully redirect to the main page. However, if the user search "xuyennguyen2733.github.io/PortfolioWebsite/web-app", event though the url exists, the browser will redirect to 404.
+
+- Solution: After every build, create a 404.html file in the build folder (docs in this case) with the following content:
+
+<script type="text/javascript">
+    // Redirect to the correct route
+    var path = window.location.pathname;
+    window.location.replace("/PortfolioWebsite/");
+</script>
+  
+- This script will redirect to the root url (doesn't break) instead of 404 (appears like the website breaks to the user's point of view). This is not perfect, but considering that GitHub restrict direct access to sub URLs and is more suitable for standalone websites, this solution works well enough to keep users from being kicked out of the website.
