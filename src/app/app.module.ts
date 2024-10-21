@@ -50,6 +50,7 @@ import {
 import { MatTooltip } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatLabel } from '@angular/material/form-field';
+import { ThreeDeeViewerComponent } from './shared/three-dee-viewer/three-dee-viewer.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { MatLabel } from '@angular/material/form-field';
     SvgIconButtonComponent,
     LinkCardComponent,
     PopUpImage,
+    ThreeDeeViewerComponent,
   ],
   imports: [
     BrowserModule,

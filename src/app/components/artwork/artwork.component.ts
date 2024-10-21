@@ -62,26 +62,26 @@ export class ArtworkComponent {
   artPreviews3D: ArtPreview[] = [
     {
       imagePath: 'images/3d-arts/scooter.webp',
-      downloadPath:
-        'https://drive.google.com/file/d/1o2LlOj4GUUE7DuFeem90_OkkUrpfMFBt/view?usp=sharing',
+      downloadPath: 'three-dee-models/scooter.fbx',
+        // 'https://drive.google.com/file/d/1o2LlOj4GUUE7DuFeem90_OkkUrpfMFBt/view?usp=sharing',
       title: 'A Pink Scooter',
     },
     {
       imagePath: 'images/3d-arts/ninja-lead.webp',
-      downloadPath:
-        'https://drive.google.com/file/d/1LtFjYHlNEpXZfkPJgxYq1rFx2RN0GJWh/view?usp=sharing',
+      downloadPath: 'three-dee-models/ninja-fbx',
+        // 'https://drive.google.com/file/d/1LtFjYHlNEpXZfkPJgxYq1rFx2RN0GJWh/view?usp=sharing',
       title: 'Ninja Lead - Who Rides the Scooter!',
     },
     {
       imagePath: 'images/3d-arts/pagoda.webp',
-      downloadPath:
-        'https://drive.google.com/file/d/1q6ysS2Gwie9guYgZFU4-dPXsT_-q06lE/view?usp=sharing',
+      downloadPath: 'three-dee-models/pagoda.fbx',
+        // 'https://drive.google.com/file/d/1q6ysS2Gwie9guYgZFU4-dPXsT_-q06lE/view?usp=sharing',
       title: 'A Pagoda',
     },
     {
       imagePath: 'images/3d-arts/carriage.webp',
-      downloadPath:
-        'https://drive.google.com/file/d/1YTdC36d23OsAIWAkJ193vso5rnlXHPvN/view?usp=sharing',
+      downloadPath: 'three-dee-models/carriage.fbx',
+        // 'https://drive.google.com/file/d/1YTdC36d23OsAIWAkJ193vso5rnlXHPvN/view?usp=sharing',
       title: 'A Carriage',
     },
   ];
